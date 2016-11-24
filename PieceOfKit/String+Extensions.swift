@@ -42,4 +42,8 @@ public extension String {
         return self.substring(with: Range<String.Index>(uncheckedBounds: (lower: fromIndex, upper: toIndex)))
     }
     
+    func length() -> Int {
+        return self.characters.count
+    }
+    
 }
