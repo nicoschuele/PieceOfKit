@@ -1,4 +1,4 @@
-# Piece Of Kit
+# PieceOfKit
 
 A collection of useful extensions and helper methods for iOS Swift 3 developers.
 
