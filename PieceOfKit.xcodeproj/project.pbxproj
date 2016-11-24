@@ -12,6 +12,7 @@
 		03746DA11DE6741200AA9D5C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03746DA01DE6741200AA9D5C /* String+Extensions.swift */; };
 		03746DA31DE6746B00AA9D5C /* StringTrimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03746DA21DE6746B00AA9D5C /* StringTrimTests.swift */; };
 		03746DA51DE67A5100AA9D5C /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03746DA41DE67A5100AA9D5C /* StringSubstringTests.swift */; };
+		03AC20201DE68C40000A595D /* StringLengthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC201F1DE68C40000A595D /* StringLengthTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		03746DA01DE6741200AA9D5C /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		03746DA21DE6746B00AA9D5C /* StringTrimTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTrimTests.swift; sourceTree = "<group>"; };
 		03746DA41DE67A5100AA9D5C /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
+		03AC201F1DE68C40000A595D /* StringLengthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringLengthTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				03746D961DE670E800AA9D5C /* Info.plist */,
 				03746DA21DE6746B00AA9D5C /* StringTrimTests.swift */,
 				03746DA41DE67A5100AA9D5C /* StringSubstringTests.swift */,
+				03AC201F1DE68C40000A595D /* StringLengthTests.swift */,
 			);
 			path = PieceOfKitTests;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				03746DA31DE6746B00AA9D5C /* StringTrimTests.swift in Sources */,
 				03746DA51DE67A5100AA9D5C /* StringSubstringTests.swift in Sources */,
+				03AC20201DE68C40000A595D /* StringLengthTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
