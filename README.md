@@ -2,10 +2,11 @@
 
 A collection of useful extensions and helper methods for iOS Swift 3 developers.
 
+## Build Information
+
 master | development
 ------ | -----------
 [![Build Status](https://travis-ci.org/nicoschuele/PieceOfKit.svg?branch=master)](https://travis-ci.org/nicoschuele/PieceOfKit) | [![Build Status](https://travis-ci.org/nicoschuele/PieceOfKit.svg?branch=development)](https://travis-ci.org/nicoschuele/PieceOfKit)
-
 
 ## Installation
 
