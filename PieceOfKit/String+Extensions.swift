@@ -11,6 +11,17 @@ import Foundation
 /// Useful extensions for the String class
 public extension String {
     
+    //MARK: Properties
+    
+    /**
+     Gets the length of a string! Property only here for convenience
+     */
+    var length: Int {
+        return self.characters.count
+    }
+    
+    //MARK: Instance methods
+    
     /**
      Trims a string from leading and trailing whitespaces and optionally newline characters
      
@@ -35,20 +46,11 @@ public extension String {
      - Parameter range: The non inclusive range in the `String` object. For example, `0..<5`
      
      - Returns: a substring as `String`
-    */
+     */
     func substring(_ range: Range<Int>) -> String {
         let fromIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
         let toIndex = self.index(self.startIndex, offsetBy: range.upperBound)
         return self.substring(with: Range<String.Index>(uncheckedBounds: (lower: fromIndex, upper: toIndex)))
-    }
-    
-    /**
-     Gets the length of a string! Method only here for convenience
-     
-     - Returns: a lenght as `Int`
-    */
-    func length() -> Int {
-        return self.characters.count
     }
     
 }
