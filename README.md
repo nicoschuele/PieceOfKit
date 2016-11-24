@@ -1,6 +1,8 @@
 # PieceOfKit
 
-master: [![Build Status](https://travis-ci.org/nicoschuele/PieceOfKit.svg?branch=master)](https://travis-ci.org/nicoschuele/PieceOfKit) | development: [![Build Status](https://travis-ci.org/nicoschuele/PieceOfKit.svg?branch=development)](https://travis-ci.org/nicoschuele/PieceOfKit)
+---
+<center>master: [![Build Status](https://travis-ci.org/nicoschuele/PieceOfKit.svg?branch=master)](https://travis-ci.org/nicoschuele/PieceOfKit) | development: [![Build Status](https://travis-ci.org/nicoschuele/PieceOfKit.svg?branch=development)](https://travis-ci.org/nicoschuele/PieceOfKit)</center>
+---
 
 A collection of useful extensions and helper methods for iOS Swift 3 developers.
 
