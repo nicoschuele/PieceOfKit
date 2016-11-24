@@ -3,8 +3,12 @@ language: objective-c
 branches:
  only:
  - master
- - development
+ - travis
 
 xcode_project: PieceOfKit.xcodeproj
-xcode_scheme: PieceOfKit
+xcode_scheme: PieceOfKitTests
 osx_image: xcode8.1
+xcode_sdk: iphonesimulator10.1
+
+script:
+  - xcodebuild clean build test -project PieceOfKit.xcodeproj -scheme PieceOfKitTests
