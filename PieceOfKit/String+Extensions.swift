@@ -27,6 +27,21 @@ public extension String {
         return !isEmpty && range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
     }
     
+    /**
+     Tells if the string is composed of digits only
+     */
+    var digitsOnly: Bool {
+        return !isEmpty && range(of: "[^0-9]", options: .regularExpression) == nil
+    }
+    
+    /**
+     Tells if the string is composed of letters only
+     */
+    var lettersOnly: Bool {
+        return !isEmpty && range(of: "[^a-zA-Z]", options: .regularExpression) == nil
+    }
+
+    
     //MARK: Instance methods
     
     /**
