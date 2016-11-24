@@ -3,7 +3,7 @@ language: objective-c
 branches:
  only:
  - master
- - travis
+ - development
 
 xcode_project: PieceOfKit.xcodeproj
 xcode_scheme: PieceOfKitTests
