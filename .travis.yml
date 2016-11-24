@@ -7,4 +7,3 @@ branches:
 xcode_project: PieceOfKit.xcodeproj
 xcode_scheme: PieceOfKit
 osx_image: xcode8.1
-xcode_sdk: iphonesimulator10.1
