@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import PieceOfKit
 
 class StringSubstringTests: XCTestCase {
     
