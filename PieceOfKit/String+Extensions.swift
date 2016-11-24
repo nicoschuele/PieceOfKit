@@ -42,6 +42,11 @@ public extension String {
         return self.substring(with: Range<String.Index>(uncheckedBounds: (lower: fromIndex, upper: toIndex)))
     }
     
+    /**
+     Gets the length of a string! Method only here for convenience
+     
+     - Returns: a lenght as `Int`
+    */
     func length() -> Int {
         return self.characters.count
     }
