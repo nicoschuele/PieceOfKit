@@ -11,4 +11,4 @@ osx_image: xcode8.1
 xcode_sdk: iphonesimulator10.1
 
 script:
-  - xcodebuild test -project PieceOfKit.xcodeproj -scheme "PieceOfKitTests" -destination 'platform=iOS Simulator,name=iPhone SE'
+  - xcodebuild test -project PieceOfKit.xcodeproj -scheme "PieceOfKitTests" -sdk iphonesimulator -destination "name=iPhone SE"
