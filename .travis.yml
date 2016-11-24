@@ -3,6 +3,12 @@ language: objective-c
 branches:
  only:
  - master
+ - development
+
+before_install:
+  - export IOS_SIMULATOR_UDID=`instruments -s devices | grep "iPhone SE (10.1" | awk -F '[ ]' '{print $4}' | awk -F '[\[]' '{print $2}' | sed 's/.$//'`
+  - echo $IOS_SIMULATOR_UDID
+  - open -a "simulator" --args -CurrentDeviceUDID $IOS_SIMULATOR_UDID
 
 xcode_project: PieceOfKit.xcodeproj
 xcode_scheme: PieceOfKitTests
