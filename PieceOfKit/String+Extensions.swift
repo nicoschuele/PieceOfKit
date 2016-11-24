@@ -20,6 +20,13 @@ public extension String {
         return self.characters.count
     }
     
+    /**
+     Tells if the string is composed of only alphanumeric characters
+    */
+    var isAlphaNumeric: Bool {
+        return !isEmpty && range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
+    }
+    
     //MARK: Instance methods
     
     /**
