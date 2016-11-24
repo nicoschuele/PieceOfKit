@@ -12,13 +12,13 @@ import Foundation
 public extension String {
     
     /**
-        Trims a string from leading and trailing whitespaces and optionally newline characters
+     Trims a string from leading and trailing whitespaces and optionally newline characters
      
-        - Parameters:
-            - newLine: if true, will trim newline characters as well. Defaults to false.
+     - Parameters:
+     - newLine: if true, will trim newline characters as well. Defaults to false.
      
-        - Returns: a trimmed String
-    */
+     - Returns: a trimmed String
+     */
     func trim(shouldTrimNewLineCharacters newLine: Bool = false) -> String {
         let string = self
         
@@ -29,4 +29,11 @@ public extension String {
             return string.trimmingCharacters(in: .whitespaces)
         }
     }
+    
+    func substring(_ r: Range<Int>) -> String {
+        let fromIndex = self.index(self.startIndex, offsetBy: r.lowerBound)
+        let toIndex = self.index(self.startIndex, offsetBy: r.upperBound)
+        return self.substring(with: Range<String.Index>(uncheckedBounds: (lower: fromIndex, upper: toIndex)))
+    }
+    
 }
