@@ -16,6 +16,8 @@
 		03916AD21DE73F47002F51C8 /* StringLettersOnlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03916AD11DE73F47002F51C8 /* StringLettersOnlyTests.swift */; };
 		03AC20201DE68C40000A595D /* StringLengthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC201F1DE68C40000A595D /* StringLengthTests.swift */; };
 		03AC20241DE69653000A595D /* StringIsAlphaNumericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC20231DE69653000A595D /* StringIsAlphaNumericTests.swift */; };
+		03B8C6811DEA4F1B0067B058 /* KeyboardManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B8C6801DEA4F1B0067B058 /* KeyboardManagement.swift */; };
+		03B8C6841DEA4F510067B058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B8C6831DEA4F510067B058 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		03916AD11DE73F47002F51C8 /* StringLettersOnlyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringLettersOnlyTests.swift; sourceTree = "<group>"; };
 		03AC201F1DE68C40000A595D /* StringLengthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringLengthTests.swift; sourceTree = "<group>"; };
 		03AC20231DE69653000A595D /* StringIsAlphaNumericTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringIsAlphaNumericTests.swift; sourceTree = "<group>"; };
+		03B8C6801DEA4F1B0067B058 /* KeyboardManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManagement.swift; sourceTree = "<group>"; };
+		03B8C6831DEA4F510067B058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B8C6841DEA4F510067B058 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +73,7 @@
 				03746D881DE670E800AA9D5C /* PieceOfKit */,
 				03746D931DE670E800AA9D5C /* PieceOfKitTests */,
 				03746D871DE670E800AA9D5C /* Products */,
+				03B8C6821DEA4F510067B058 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +92,7 @@
 				03746D891DE670E800AA9D5C /* PieceOfKit.h */,
 				03746D8A1DE670E800AA9D5C /* Info.plist */,
 				03746DA01DE6741200AA9D5C /* String+Extensions.swift */,
+				03B8C6801DEA4F1B0067B058 /* KeyboardManagement.swift */,
 			);
 			path = PieceOfKit;
 			sourceTree = "<group>";
@@ -102,6 +109,14 @@
 				03916AD11DE73F47002F51C8 /* StringLettersOnlyTests.swift */,
 			);
 			path = PieceOfKitTests;
+			sourceTree = "<group>";
+		};
+		03B8C6821DEA4F510067B058 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03B8C6831DEA4F510067B058 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03746DA11DE6741200AA9D5C /* String+Extensions.swift in Sources */,
+				03B8C6811DEA4F1B0067B058 /* KeyboardManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
