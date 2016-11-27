@@ -9,22 +9,31 @@
 import UIKit
 
 public class KeyboardManager {
+    let notificationCenter = NotificationCenter.default
+    
     var notifyFromObject: Any?
-    var observer: Any
     public var viewsToPushUp: [UIView] = []
     
-    public init(observer: Any, viewsToPushUp: [UIView], notifyFromObject: Any? = nil) {
-        self.observer = observer
+    
+    public init(viewsToPushUp: [UIView], notifyFromObject: Any? = nil) {
         self.notifyFromObject = notifyFromObject
         self.viewsToPushUp = viewsToPushUp
     }
     
-    public func pushViewsUpWhenKeyboardWillShow(){
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self.observer, selector: #selector(PieceOfKit.KeyboardManager.pushViewsUp(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: notifyFromObject)
+    public func pushViewsUpWhenKeyboardWillShow() {
+        notificationCenter.addObserver(self, selector: #selector(PieceOfKit.KeyboardManager.pushViewsUp(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: notifyFromObject)
     }
     
-    @objc public func pushViewsUp(_ notification: NSNotification) {
+    public func pullViewsDownWhenKeyboardWillHide() {
+        notificationCenter.addObserver(self, selector: #selector(pushViewsDown(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: notifyFromObject)
+    }
+    
+    public func stopListeningToKeyboardNotifications() {
+        notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: notifyFromObject)
+        notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: notifyFromObject)
+    }
+    
+    @objc internal func pushViewsUp(_ notification: NSNotification) {
         if let keyboardRectValue = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let keyboardHeight = keyboardRectValue.height
             
@@ -32,6 +41,17 @@ public class KeyboardManager {
                 view.frame.origin.y -= keyboardHeight
             }
         }
+    }
+    
+    @objc internal func pushViewsDown(_ notification: NSNotification) {
+        if let keyboardRectValue = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let keyboardHeight = keyboardRectValue.height
+            
+            for view in viewsToPushUp {
+                view.frame.origin.y += keyboardHeight
+            }
+        }
+        
     }
 }
 
