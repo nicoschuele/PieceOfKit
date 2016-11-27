@@ -8,13 +8,13 @@
 
 import UIKit
 
+/// Push/pull views when the keyboard appears and disappears
 public class KeyboardManager {
     let notificationCenter = NotificationCenter.default
     
-    var notifyFromObject: Any?
+    public var notifyFromObject: Any?
     public var viewsToPushUp: [UIView] = []
-    
-    
+        
     public init(viewsToPushUp: [UIView], notifyFromObject: Any? = nil) {
         self.notifyFromObject = notifyFromObject
         self.viewsToPushUp = viewsToPushUp
