@@ -29,4 +29,16 @@ public extension Date {
     public func addSeconds(_ seconds: Int) -> Date {
         return Calendar(identifier: .gregorian).date(byAdding: .second, value: seconds, to: self)!
     }
+    
+    public static func dateFromYYYYMMDD(_ string: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        return dateFormatter.date(from: string)
+    }
+    
+    public static func dateFromYYYYMMDDHHmm(_ string: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMddHHmm"
+        return dateFormatter.date(from: string)
+    }
 }

@@ -27,6 +27,12 @@ class DateExtensionsTests: XCTestCase {
     var datePlusOneSecond: Date?
     var dateMinusOneMonth: Date?
     
+    let strYYYYMMDD = "19781103"
+    let strYYYYMMDDHHmm = "197811032000"
+    
+    var dateYYYYMMDD: Date?
+    var dateYYYYMMDDHHmm: Date?
+    
     override func setUp() {
         super.setUp()
         
@@ -40,6 +46,14 @@ class DateExtensionsTests: XCTestCase {
         datePlusOneMinute = dateFormatter.date(from: strDatePlusOneMinute)
         datePlusOneSecond = dateFormatter.date(from: strDatePlusOneSecond)
         dateMinusOneMonth = dateFormatter.date(from: strDateMinusOneMonth)
+        
+        let YYYYMMDDFormatter = DateFormatter()
+        YYYYMMDDFormatter.dateFormat = "yyyyMMdd"
+        dateYYYYMMDD = YYYYMMDDFormatter.date(from: strYYYYMMDD)
+        
+        let YYYYMMDDHHmmFormatter = DateFormatter()
+        YYYYMMDDHHmmFormatter.dateFormat = "yyyyMMddHHmm"
+        dateYYYYMMDDHHmm = YYYYMMDDHHmmFormatter.date(from: strYYYYMMDDHHmm)
 
     }
     
@@ -65,6 +79,14 @@ class DateExtensionsTests: XCTestCase {
     
     func testRemoveOneMonth() {
         XCTAssertEqual(dateMinusOneMonth!, initialDate?.addMonths(-1))
+    }
+    
+    func testYYYYMMDD() {
+        XCTAssertEqual(dateYYYYMMDD!, Date.dateFromYYYYMMDD(strYYYYMMDD)!)
+    }
+    
+    func testYYYYMMDDHHmm() {
+        XCTAssertEqual(dateYYYYMMDDHHmm!, Date.dateFromYYYYMMDDHHmm(strYYYYMMDDHHmm)!)
     }
     
 }
