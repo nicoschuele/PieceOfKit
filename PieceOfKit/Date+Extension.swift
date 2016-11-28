@@ -41,4 +41,6 @@ public extension Date {
         dateFormatter.dateFormat = "yyyyMMddHHmm"
         return dateFormatter.date(from: string)
     }
+    
+    //TODO: implement Date to String methods
 }
