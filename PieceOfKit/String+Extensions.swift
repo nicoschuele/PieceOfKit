@@ -16,28 +16,28 @@ public extension String {
     /**
      Gets the length of a string! Property only here for convenience
      */
-    var length: Int {
+    public var length: Int {
         return self.characters.count
     }
     
     /**
      Tells if the string is composed of only alphanumeric characters
     */
-    var isAlphaNumeric: Bool {
+    public var isAlphaNumeric: Bool {
         return !isEmpty && range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
     }
     
     /**
      Tells if the string is composed of digits only
      */
-    var digitsOnly: Bool {
+    public var digitsOnly: Bool {
         return !isEmpty && range(of: "[^0-9]", options: .regularExpression) == nil
     }
     
     /**
      Tells if the string is composed of letters only
      */
-    var lettersOnly: Bool {
+    public var lettersOnly: Bool {
         return !isEmpty && range(of: "[^a-zA-Z]", options: .regularExpression) == nil
     }
 
@@ -51,7 +51,7 @@ public extension String {
      
      - Returns: a trimmed `String`
      */
-    func trim(shouldTrimNewLineCharacters newLine: Bool = false) -> String {
+    public func trim(shouldTrimNewLineCharacters newLine: Bool = false) -> String {
         let string = self
         
         if newLine {
@@ -69,7 +69,7 @@ public extension String {
      
      - Returns: a substring as `String`
      */
-    func substring(_ range: Range<Int>) -> String {
+    public func substring(_ range: Range<Int>) -> String {
         let fromIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
         let toIndex = self.index(self.startIndex, offsetBy: range.upperBound)
         return self.substring(with: Range<String.Index>(uncheckedBounds: (lower: fromIndex, upper: toIndex)))
