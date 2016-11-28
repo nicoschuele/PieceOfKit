@@ -10,6 +10,23 @@ import Foundation
 
 public extension Date {
     
+    public func addMonths(_ months: Int) -> Date {
+        return Calendar(identifier: .gregorian).date(byAdding: .month, value: months, to: self)!
+    }
     
+    public func addDays(_ days: Int) -> Date {
+        return Calendar(identifier: .gregorian).date(byAdding: .day, value: days, to: self)!
+    }
     
+    public func addHours(_ hours: Int) -> Date {
+        return Calendar(identifier: .gregorian).date(byAdding: .hour, value: hours, to: self)!
+    }
+    
+    public func addMinutes(_ minutes: Int) -> Date {
+        return Calendar(identifier: .gregorian).date(byAdding: .minute, value: minutes, to: self)!
+    }
+    
+    public func addSeconds(_ seconds: Int) -> Date {
+        return Calendar(identifier: .gregorian).date(byAdding: .second, value: seconds, to: self)!
+    }
 }
