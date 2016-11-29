@@ -77,7 +77,7 @@ class DateExtensionsTests: XCTestCase {
         let strYYYYMMDDHHmm = "197811032000"
         dateFormatter.dateFormat = "yyyyMMddHHmm"
         let dateYYYYMMDDHHmm = dateFormatter.date(from: strYYYYMMDDHHmm)
-        XCTAssertEqual(dateYYYYMMDDHHmm!, Date.dateFromString(strYYYYMMDDHHmm, stringDateFormat: Date.StringDateFormat.YYYYMMDDHHmm))
+        XCTAssertEqual(dateYYYYMMDDHHmm!, Date.dateFromString(strYYYYMMDDHHmm, stringDateFormat: StringDateFormat.YYYYMMDDHHmm))
     }
     
     func testStringFromDateAsYYYYMMDD() {
