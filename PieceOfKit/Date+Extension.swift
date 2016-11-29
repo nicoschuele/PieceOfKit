@@ -35,8 +35,9 @@ public extension Date {
         return Calendar(identifier: .gregorian).date(byAdding: .second, value: seconds, to: self)!
     }
     
-    public func stringFromDate(stringDateFormat format: StringDateFormat) -> String {
+    public func stringFromDate(stringDateFormat format: StringDateFormat = StringDateFormat.YYYYMMDD) -> String {
         let dateFormatter = DateFormatter()
+        
         switch format {
         case .YYYYMMDD:
             dateFormatter.dateFormat = "yyyyMMdd"
@@ -47,15 +48,17 @@ public extension Date {
         return dateFormatter.string(from: self)
     }
     
-    public static func dateFromYYYYMMDD(_ string: String) -> Date? {
+    public static func dateFromString(_ string: String, stringDateFormat format: StringDateFormat = StringDateFormat.YYYYMMDD) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMdd"
+        
+        switch format {
+        case .YYYYMMDD:
+            dateFormatter.dateFormat = "yyyyMMdd"
+        case .YYYYMMDDHHmm:
+            dateFormatter.dateFormat = "yyyyMMddHHmm"
+        }
+        
         return dateFormatter.date(from: string)
     }
     
-    public static func dateFromYYYYMMDDHHmm(_ string: String) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMddHHmm"
-        return dateFormatter.date(from: string)
-    }
 }
