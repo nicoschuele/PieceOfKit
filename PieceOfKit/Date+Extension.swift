@@ -10,6 +10,11 @@ import Foundation
 
 public extension Date {
     
+    public enum StringDateFormat {
+        case YYYYMMDD
+        case YYYYMMDDHHmm
+    }
+    
     public func addMonths(_ months: Int) -> Date {
         return Calendar(identifier: .gregorian).date(byAdding: .month, value: months, to: self)!
     }
@@ -42,5 +47,15 @@ public extension Date {
         return dateFormatter.date(from: string)
     }
     
-    //TODO: implement Date to String methods
+    public static func stringFromDate(date: Date, stringDateFormat format: StringDateFormat) -> String {
+        let dateFormatter = DateFormatter()
+        switch format {
+        case .YYYYMMDD:
+            dateFormatter.dateFormat = "yyyyyMMdd"
+        case .YYYYMMDDHHmm:
+            dateFormatter.dateFormat = "yyyyMMddHHmm"
+        }
+        
+        return dateFormatter.string(from: date)
+    }
 }
