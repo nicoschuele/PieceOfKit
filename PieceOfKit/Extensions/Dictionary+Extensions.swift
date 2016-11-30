@@ -18,7 +18,27 @@ public extension Dictionary {
      
      - Returns: `Bool`
      */
-    func has(key: Key) -> Bool {
+    public func has(key: Key) -> Bool {
         return index(forKey: key) != nil
-    }    
+    }
+    
+    /**
+     Converts the dictionary into a string
+     
+     Format: `"key":"value","key2":"value2"`
+     
+     - Returns: a `String` representation of the `Dictionary`
+     */
+    public func toString() -> String {
+        var output = ""
+        var count = 0
+        for (k,v) in self {
+            count += 1
+            output += "\"\(k)\":\"\(v)\""
+            if count < self.keys.count {
+                output += ","
+            }
+        }
+        return output
+    }
 }

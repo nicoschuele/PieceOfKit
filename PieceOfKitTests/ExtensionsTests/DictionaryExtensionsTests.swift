@@ -21,4 +21,12 @@ class DictionaryExtensionsTests: XCTestCase {
         XCTAssertTrue(dic2.has(key: 2))
         XCTAssertFalse(dic2.has(key: 8))
     }
+    
+    func testToString() {
+        let dic = [1: "Blue", 2: "Green", 3: "White"]
+        
+        XCTAssertTrue(dic.toString().contains("\"1\":\"Blue\""))
+        XCTAssertTrue(dic.toString().contains("\"2\":\"Green\""))
+        XCTAssertTrue(dic.toString().contains("\"3\":\"White\""))
+    }
 }
