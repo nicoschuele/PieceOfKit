@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Useful extensions for the Bool class
 public extension Bool {
     
     /**
