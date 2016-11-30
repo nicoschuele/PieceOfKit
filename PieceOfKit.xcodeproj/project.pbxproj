@@ -21,6 +21,7 @@
 		03DC6C191DEBE78D006E94C7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC6C181DEBE78D006E94C7 /* Date+Extensions.swift */; };
 		03DC6C1B1DEBEA76006E94C7 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC6C1A1DEBEA76006E94C7 /* DateExtensionsTests.swift */; };
 		03FB45881DEF4D9E00C57747 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45871DEF4D9E00C57747 /* Int+Extensions.swift */; };
+		03FB458A1DEF4E5900C57747 /* IntExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45891DEF4E5900C57747 /* IntExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		03DC6C181DEBE78D006E94C7 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		03DC6C1A1DEBEA76006E94C7 /* DateExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensionsTests.swift; sourceTree = "<group>"; };
 		03FB45871DEF4D9E00C57747 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		03FB45891DEF4E5900C57747 /* IntExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				03916ACF1DE73D8F002F51C8 /* StringDigitsOnlyTests.swift */,
 				03916AD11DE73F47002F51C8 /* StringLettersOnlyTests.swift */,
 				03DC6C1A1DEBEA76006E94C7 /* DateExtensionsTests.swift */,
+				03FB45891DEF4E5900C57747 /* IntExtensionsTests.swift */,
 			);
 			path = PieceOfKitTests;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03746DA31DE6746B00AA9D5C /* StringTrimTests.swift in Sources */,
+				03FB458A1DEF4E5900C57747 /* IntExtensionsTests.swift in Sources */,
 				03DC6C1B1DEBEA76006E94C7 /* DateExtensionsTests.swift in Sources */,
 				03916AD01DE73D8F002F51C8 /* StringDigitsOnlyTests.swift in Sources */,
 				03916AD21DE73F47002F51C8 /* StringLettersOnlyTests.swift in Sources */,
