@@ -20,6 +20,7 @@
 		03B8C6841DEA4F510067B058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B8C6831DEA4F510067B058 /* UIKit.framework */; };
 		03DC6C191DEBE78D006E94C7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC6C181DEBE78D006E94C7 /* Date+Extensions.swift */; };
 		03DC6C1B1DEBEA76006E94C7 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC6C1A1DEBEA76006E94C7 /* DateExtensionsTests.swift */; };
+		03FB45881DEF4D9E00C57747 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45871DEF4D9E00C57747 /* Int+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		03B8C6831DEA4F510067B058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03DC6C181DEBE78D006E94C7 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		03DC6C1A1DEBEA76006E94C7 /* DateExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensionsTests.swift; sourceTree = "<group>"; };
+		03FB45871DEF4D9E00C57747 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				03DC6C181DEBE78D006E94C7 /* Date+Extensions.swift */,
 				03746DA01DE6741200AA9D5C /* String+Extensions.swift */,
 				03B8C6801DEA4F1B0067B058 /* KeyboardManager.swift */,
+				03FB45871DEF4D9E00C57747 /* Int+Extensions.swift */,
 			);
 			path = PieceOfKit;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03746DA11DE6741200AA9D5C /* String+Extensions.swift in Sources */,
+				03FB45881DEF4D9E00C57747 /* Int+Extensions.swift in Sources */,
 				03B8C6811DEA4F1B0067B058 /* KeyboardManager.swift in Sources */,
 				03DC6C191DEBE78D006E94C7 /* Date+Extensions.swift in Sources */,
 			);
