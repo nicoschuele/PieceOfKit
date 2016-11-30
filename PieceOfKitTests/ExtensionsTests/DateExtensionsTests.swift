@@ -83,13 +83,13 @@ class DateExtensionsTests: XCTestCase {
     func testStringFromDateAsYYYYMMDD() {
         let stringDate = "19781103"
         let dateFromString = Date.dateFromString(stringDate)
-        XCTAssertEqual(stringDate, dateFromString!.stringFromDate())
+        XCTAssertEqual(stringDate, dateFromString!.toString())
     }
     
     func testStringFromDateAsYYYYMMDDHHmm() {
         let stringDate = "197811031400"
         let dateFromString = Date.dateFromString(stringDate, stringDateFormat: .YYYYMMDDHHmm)
-        XCTAssertEqual(stringDate, dateFromString?.stringFromDate(stringDateFormat: .YYYYMMDDHHmm))
+        XCTAssertEqual(stringDate, dateFromString?.toString(stringDateFormat: .YYYYMMDDHHmm))
     }
     
     func testDateFromStringCanBeNil() {

@@ -81,7 +81,7 @@ public extension Date {
      
      - Returns: a `String` in the format YYYYMMDD or YYYYMMDDHHmm
      */
-    public func stringFromDate(stringDateFormat format: StringDateFormat = StringDateFormat.YYYYMMDD) -> String {
+    public func toString(stringDateFormat format: StringDateFormat = StringDateFormat.YYYYMMDD) -> String {
         let dateFormatter = DateFormatter()
         
         switch format {
