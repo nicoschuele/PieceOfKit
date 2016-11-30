@@ -26,6 +26,7 @@
 		03FB45AF1DEF741E00C57747 /* BoolExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45AE1DEF741E00C57747 /* BoolExtensionsTests.swift */; };
 		03FB45B21DEF743500C57747 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45B01DEF743500C57747 /* Bool+Extensions.swift */; };
 		03FB45B31DEF743500C57747 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45B11DEF743500C57747 /* UIColor+Extensions.swift */; };
+		03FB45B51DEF74AE00C57747 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45B41DEF74AE00C57747 /* Dictionary+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		03FB45AE1DEF741E00C57747 /* BoolExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoolExtensionsTests.swift; path = ExtensionsTests/BoolExtensionsTests.swift; sourceTree = "<group>"; };
 		03FB45B01DEF743500C57747 /* Bool+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Bool+Extensions.swift"; path = "PieceOfKit/Extensions/Bool+Extensions.swift"; sourceTree = "<group>"; };
 		03FB45B11DEF743500C57747 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "PieceOfKit/Extensions/UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		03FB45B41DEF74AE00C57747 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+Extensions.swift"; path = "PieceOfKit/Extensions/Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				03FB45B01DEF743500C57747 /* Bool+Extensions.swift */,
+				03FB45B41DEF74AE00C57747 /* Dictionary+Extensions.swift */,
 				03FB45901DEF638400C57747 /* Date+Extensions.swift */,
 				03FB45911DEF638400C57747 /* Int+Extensions.swift */,
 				03FB45921DEF638400C57747 /* String+Extensions.swift */,
@@ -283,6 +286,7 @@
 				03FB45951DEF638400C57747 /* String+Extensions.swift in Sources */,
 				03FB45B21DEF743500C57747 /* Bool+Extensions.swift in Sources */,
 				03FB45B31DEF743500C57747 /* UIColor+Extensions.swift in Sources */,
+				03FB45B51DEF74AE00C57747 /* Dictionary+Extensions.swift in Sources */,
 				03FB458F1DEF636900C57747 /* KeyboardManager.swift in Sources */,
 				03FB45941DEF638400C57747 /* Int+Extensions.swift in Sources */,
 				03FB45931DEF638400C57747 /* Date+Extensions.swift in Sources */,
