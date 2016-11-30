@@ -111,14 +111,14 @@
 			isa = PBXGroup;
 			children = (
 				03746D961DE670E800AA9D5C /* Info.plist */,
+				03DC6C1A1DEBEA76006E94C7 /* DateExtensionsTests.swift */,
+				03FB45891DEF4E5900C57747 /* IntExtensionsTests.swift */,
 				03746DA21DE6746B00AA9D5C /* StringTrimTests.swift */,
 				03746DA41DE67A5100AA9D5C /* StringSubstringTests.swift */,
 				03AC201F1DE68C40000A595D /* StringLengthTests.swift */,
 				03AC20231DE69653000A595D /* StringIsAlphaNumericTests.swift */,
 				03916ACF1DE73D8F002F51C8 /* StringDigitsOnlyTests.swift */,
 				03916AD11DE73F47002F51C8 /* StringLettersOnlyTests.swift */,
-				03DC6C1A1DEBEA76006E94C7 /* DateExtensionsTests.swift */,
-				03FB45891DEF4E5900C57747 /* IntExtensionsTests.swift */,
 			);
 			path = PieceOfKitTests;
 			sourceTree = "<group>";
