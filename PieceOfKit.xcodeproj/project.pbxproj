@@ -22,10 +22,10 @@
 		03FB45A31DEF639800C57747 /* StringLettersOnlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB459B1DEF639800C57747 /* StringLettersOnlyTests.swift */; };
 		03FB45A41DEF639800C57747 /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB459C1DEF639800C57747 /* StringSubstringTests.swift */; };
 		03FB45A51DEF639800C57747 /* StringTrimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB459D1DEF639800C57747 /* StringTrimTests.swift */; };
-		03FB45A71DEF65DB00C57747 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45A61DEF65DB00C57747 /* Bool+Extensions.swift */; };
-		03FB45A91DEF66D800C57747 /* BoolExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45A81DEF66D800C57747 /* BoolExtensionsTests.swift */; };
-		03FB45AB1DEF68C500C57747 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45AA1DEF68C500C57747 /* UIColor+Extensions.swift */; };
 		03FB45AD1DEF6A2C00C57747 /* UIColorExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45AC1DEF6A2C00C57747 /* UIColorExtensionsTests.swift */; };
+		03FB45AF1DEF741E00C57747 /* BoolExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45AE1DEF741E00C57747 /* BoolExtensionsTests.swift */; };
+		03FB45B21DEF743500C57747 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45B01DEF743500C57747 /* Bool+Extensions.swift */; };
+		03FB45B31DEF743500C57747 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45B11DEF743500C57747 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +57,10 @@
 		03FB459B1DEF639800C57747 /* StringLettersOnlyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringLettersOnlyTests.swift; path = ExtensionsTests/StringLettersOnlyTests.swift; sourceTree = "<group>"; };
 		03FB459C1DEF639800C57747 /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringSubstringTests.swift; path = ExtensionsTests/StringSubstringTests.swift; sourceTree = "<group>"; };
 		03FB459D1DEF639800C57747 /* StringTrimTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringTrimTests.swift; path = ExtensionsTests/StringTrimTests.swift; sourceTree = "<group>"; };
-		03FB45A61DEF65DB00C57747 /* Bool+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
-		03FB45A81DEF66D800C57747 /* BoolExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolExtensionsTests.swift; sourceTree = "<group>"; };
-		03FB45AA1DEF68C500C57747 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		03FB45AC1DEF6A2C00C57747 /* UIColorExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtensionsTests.swift; path = ExtensionsTests/UIColorExtensionsTests.swift; sourceTree = "<group>"; };
+		03FB45AE1DEF741E00C57747 /* BoolExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoolExtensionsTests.swift; path = ExtensionsTests/BoolExtensionsTests.swift; sourceTree = "<group>"; };
+		03FB45B01DEF743500C57747 /* Bool+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Bool+Extensions.swift"; path = "PieceOfKit/Extensions/Bool+Extensions.swift"; sourceTree = "<group>"; };
+		03FB45B11DEF743500C57747 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "PieceOfKit/Extensions/UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,11 +133,11 @@
 		03FB458B1DEF62A900C57747 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				03FB45A61DEF65DB00C57747 /* Bool+Extensions.swift */,
+				03FB45B01DEF743500C57747 /* Bool+Extensions.swift */,
 				03FB45901DEF638400C57747 /* Date+Extensions.swift */,
 				03FB45911DEF638400C57747 /* Int+Extensions.swift */,
 				03FB45921DEF638400C57747 /* String+Extensions.swift */,
-				03FB45AA1DEF68C500C57747 /* UIColor+Extensions.swift */,
+				03FB45B11DEF743500C57747 /* UIColor+Extensions.swift */,
 			);
 			name = Extensions;
 			path = ..;
@@ -146,7 +146,7 @@
 		03FB458C1DEF62DC00C57747 /* ExtensionsTests */ = {
 			isa = PBXGroup;
 			children = (
-				03FB45A81DEF66D800C57747 /* BoolExtensionsTests.swift */,
+				03FB45AE1DEF741E00C57747 /* BoolExtensionsTests.swift */,
 				03FB45961DEF639800C57747 /* DateExtensionsTests.swift */,
 				03FB45971DEF639800C57747 /* IntExtensionsTests.swift */,
 				03FB45981DEF639800C57747 /* StringDigitsOnlyTests.swift */,
@@ -281,10 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03FB45951DEF638400C57747 /* String+Extensions.swift in Sources */,
-				03FB45AB1DEF68C500C57747 /* UIColor+Extensions.swift in Sources */,
+				03FB45B21DEF743500C57747 /* Bool+Extensions.swift in Sources */,
+				03FB45B31DEF743500C57747 /* UIColor+Extensions.swift in Sources */,
 				03FB458F1DEF636900C57747 /* KeyboardManager.swift in Sources */,
 				03FB45941DEF638400C57747 /* Int+Extensions.swift in Sources */,
-				03FB45A71DEF65DB00C57747 /* Bool+Extensions.swift in Sources */,
 				03FB45931DEF638400C57747 /* Date+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,9 +300,9 @@
 				03FB45A51DEF639800C57747 /* StringTrimTests.swift in Sources */,
 				03FB45A11DEF639800C57747 /* StringIsAlphaNumericTests.swift in Sources */,
 				03FB45A31DEF639800C57747 /* StringLettersOnlyTests.swift in Sources */,
+				03FB45AF1DEF741E00C57747 /* BoolExtensionsTests.swift in Sources */,
 				03FB45A01DEF639800C57747 /* StringDigitsOnlyTests.swift in Sources */,
 				03FB45A21DEF639800C57747 /* StringLengthTests.swift in Sources */,
-				03FB45A91DEF66D800C57747 /* BoolExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
