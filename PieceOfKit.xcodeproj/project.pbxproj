@@ -23,6 +23,7 @@
 		03FB45A41DEF639800C57747 /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB459C1DEF639800C57747 /* StringSubstringTests.swift */; };
 		03FB45A51DEF639800C57747 /* StringTrimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB459D1DEF639800C57747 /* StringTrimTests.swift */; };
 		03FB45A71DEF65DB00C57747 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45A61DEF65DB00C57747 /* Bool+Extensions.swift */; };
+		03FB45A91DEF66D800C57747 /* BoolExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB45A81DEF66D800C57747 /* BoolExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		03FB459C1DEF639800C57747 /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringSubstringTests.swift; path = ExtensionsTests/StringSubstringTests.swift; sourceTree = "<group>"; };
 		03FB459D1DEF639800C57747 /* StringTrimTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringTrimTests.swift; path = ExtensionsTests/StringTrimTests.swift; sourceTree = "<group>"; };
 		03FB45A61DEF65DB00C57747 /* Bool+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
+		03FB45A81DEF66D800C57747 /* BoolExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		03FB458C1DEF62DC00C57747 /* ExtensionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				03FB45A81DEF66D800C57747 /* BoolExtensionsTests.swift */,
 				03FB45961DEF639800C57747 /* DateExtensionsTests.swift */,
 				03FB45971DEF639800C57747 /* IntExtensionsTests.swift */,
 				03FB45981DEF639800C57747 /* StringDigitsOnlyTests.swift */,
@@ -291,6 +294,7 @@
 				03FB45A31DEF639800C57747 /* StringLettersOnlyTests.swift in Sources */,
 				03FB45A01DEF639800C57747 /* StringDigitsOnlyTests.swift in Sources */,
 				03FB45A21DEF639800C57747 /* StringLengthTests.swift in Sources */,
+				03FB45A91DEF66D800C57747 /* BoolExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
