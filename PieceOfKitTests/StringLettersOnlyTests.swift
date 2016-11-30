@@ -17,10 +17,10 @@ class StringLettersOnlyTests: XCTestCase {
     let invalidTwo = "abc def"
     
     func testLettersOnly() {
-        XCTAssert(validOne.lettersOnly)
-        XCTAssert(validTwo.lettersOnly)
-        XCTAssert(!invalidOne.lettersOnly)
-        XCTAssert(!invalidTwo.lettersOnly)
+        XCTAssertTrue(validOne.lettersOnly)
+        XCTAssertTrue(validTwo.lettersOnly)
+        XCTAssertFalse(invalidOne.lettersOnly)
+        XCTAssertFalse(invalidTwo.lettersOnly)
     }
     
 }

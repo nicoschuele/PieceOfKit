@@ -15,7 +15,7 @@ class StringLengthTests: XCTestCase {
     let theLength = 16
     
     func testStringLength() {
-        XCTAssert(aString.length == theLength)
+        XCTAssertEqual(aString.length, theLength)
     }
     
 }

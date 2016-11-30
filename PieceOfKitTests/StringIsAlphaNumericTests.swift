@@ -19,12 +19,12 @@ class StringIsAlphaNumericTests: XCTestCase {
     let incorrectFour = "Whitespaces not allowed"
     
     func testAlphaNumeric(){
-        XCTAssert(correctOne.isAlphaNumeric)
-        XCTAssert(correctTwo.isAlphaNumeric)
-        XCTAssert(!incorrectOne.isAlphaNumeric)
-        XCTAssert(!incorrectTwo.isAlphaNumeric)
-        XCTAssert(!incorrectThree.isAlphaNumeric)
-        XCTAssert(!incorrectFour.isAlphaNumeric)
+        XCTAssertTrue(correctOne.isAlphaNumeric)
+        XCTAssertTrue(correctTwo.isAlphaNumeric)
+        XCTAssertFalse(incorrectOne.isAlphaNumeric)
+        XCTAssertFalse(incorrectTwo.isAlphaNumeric)
+        XCTAssertFalse(incorrectThree.isAlphaNumeric)
+        XCTAssertFalse(incorrectFour.isAlphaNumeric)
     }
     
 }

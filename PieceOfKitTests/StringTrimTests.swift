@@ -18,11 +18,11 @@ class StringTrimTests: XCTestCase {
     let stringWithoutWhiteSpacesAndNewLines = "this is a \ntest"
     
     func testTrimForWhiteSpaces() {
-        XCTAssert(stringWithWhiteSpaces.trim() == stringWithoutWhiteSpaces)
+        XCTAssertEqual(stringWithWhiteSpaces.trim(), stringWithoutWhiteSpaces)
     }
     
     func testTrimForWhiteSpacesAndNewLines() {
-        XCTAssert(stringWithWhiteSpacesAndNewLines.trim(shouldTrimNewLineCharacters: true) == stringWithoutWhiteSpacesAndNewLines)
+        XCTAssertEqual(stringWithWhiteSpacesAndNewLines.trim(shouldTrimNewLineCharacters: true), stringWithoutWhiteSpacesAndNewLines)
     }
     
 }

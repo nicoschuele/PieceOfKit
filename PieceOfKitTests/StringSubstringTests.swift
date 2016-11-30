@@ -17,12 +17,12 @@ class StringSubstringTests: XCTestCase {
     
     func testSubstringInMiddle() {
         let result = fullString.substring(5..<14)
-        XCTAssert(result == subStringedMiddle)
+        XCTAssertEqual(result, subStringedMiddle)
     }
     
     func testSubstringFromBeginning() {
         let result = fullString.substring(0..<7)
-        XCTAssert(result == subStringedBeginning)
+        XCTAssertEqual(result, subStringedBeginning)
     }
     
 }

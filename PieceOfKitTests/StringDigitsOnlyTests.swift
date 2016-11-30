@@ -17,10 +17,10 @@ class StringDigitsOnlyTests: XCTestCase {
     let invalidThree = "12 345"
     
     func testDigitsOnly() {
-        XCTAssert(validOne.digitsOnly)
-        XCTAssert(!invalidOne.digitsOnly)
-        XCTAssert(!invalidTwo.digitsOnly)
-        XCTAssert(!invalidThree.digitsOnly)
+        XCTAssertTrue(validOne.digitsOnly)
+        XCTAssertFalse(invalidOne.digitsOnly)
+        XCTAssertFalse(invalidTwo.digitsOnly)
+        XCTAssertFalse(invalidThree.digitsOnly)
     }
     
 }
