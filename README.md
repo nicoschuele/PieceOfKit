@@ -1,5 +1,7 @@
 # PieceOfKit
 
+[![Swift Version](https://img.shields.io/badge/Swift-3.0.x-orange.svg)]()
+
 A collection of useful extensions and helper methods for iOS Swift 3 developers.
 
 ## Build Information
