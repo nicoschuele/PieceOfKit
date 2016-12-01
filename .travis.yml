@@ -9,9 +9,6 @@ before_install:
   - export IOS_SIMULATOR_UDID=`instruments -s devices | grep "iPhone SE (10.1" | awk -F '[ ]' '{print $4}' | awk -F '[\[]' '{print $2}' | sed 's/.$//'`
   - echo $IOS_SIMULATOR_UDID
   - open -a "simulator" --args -CurrentDeviceUDID $IOS_SIMULATOR_UDID
-  
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
 
 xcode_project: PieceOfKit.xcodeproj
 xcode_scheme: PieceOfKitTests
@@ -20,3 +17,6 @@ xcode_sdk: iphonesimulator10.1
 
 script:
   - travis_retry xcodebuild test -project PieceOfKit.xcodeproj -scheme "PieceOfKitTests" -sdk iphonesimulator -destination "name=iPhone SE"
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
