@@ -30,4 +30,11 @@ class DictionaryExtensionsTests: XCTestCase {
         XCTAssertTrue(dic.toString().contains("\"2\":\"Green\""))
         XCTAssertTrue(dic.toString().contains("\"3\":\"White\""))
     }
+    
+    func testToJSONString() {
+        let dic = ["Name":"Nico", "Music":"Metal"]
+        XCTAssertTrue((dic.toJSONString()?.contains("{"))!)
+        XCTAssertTrue((dic.toJSONString()?.contains("}"))!)
+        XCTAssertTrue((dic.toJSONString()?.contains("\"Music\" : \"Metal\""))!)        
+    }
 }
