@@ -10,6 +10,7 @@
 		03746D901DE670E800AA9D5C /* PieceOfKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03746D861DE670E800AA9D5C /* PieceOfKit.framework */; };
 		03746D971DE670E800AA9D5C /* PieceOfKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 03746D891DE670E800AA9D5C /* PieceOfKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03B8C6841DEA4F510067B058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B8C6831DEA4F510067B058 /* UIKit.framework */; };
+		03C466A41DF0BAEA00469BAE /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466A31DF0BAEA00469BAE /* ArrayExtensionsTests.swift */; };
 		03DB65F81DEF763E00BB9A1F /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB65F71DEF763E00BB9A1F /* DictionaryExtensionsTests.swift */; };
 		03DB65FA1DEF80DA00BB9A1F /* IntRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB65F91DEF80DA00BB9A1F /* IntRandomTests.swift */; };
 		03DB65FC1DF03D4400BB9A1F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB65FB1DF03D4400BB9A1F /* Array+Extensions.swift */; };
@@ -49,6 +50,7 @@
 		03746D8F1DE670E800AA9D5C /* PieceOfKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PieceOfKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03746D961DE670E800AA9D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03B8C6831DEA4F510067B058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		03C466A31DF0BAEA00469BAE /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtensionsTests.swift; path = ExtensionsTests/ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 		03DB65F71DEF763E00BB9A1F /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryExtensionsTests.swift; path = ExtensionsTests/DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
 		03DB65F91DEF80DA00BB9A1F /* IntRandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntRandomTests.swift; path = ExtensionsTests/IntRandomTests.swift; sourceTree = "<group>"; };
 		03DB65FB1DF03D4400BB9A1F /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "PieceOfKit/Extensions/Array+Extensions.swift"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		03FB458C1DEF62DC00C57747 /* ExtensionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				03C466A31DF0BAEA00469BAE /* ArrayExtensionsTests.swift */,
 				03FB45AE1DEF741E00C57747 /* BoolExtensionsTests.swift */,
 				03DB65F71DEF763E00BB9A1F /* DictionaryExtensionsTests.swift */,
 				03FB45961DEF639800C57747 /* DateExtensionsTests.swift */,
@@ -314,6 +317,7 @@
 				03DB65F81DEF763E00BB9A1F /* DictionaryExtensionsTests.swift in Sources */,
 				03FB45A51DEF639800C57747 /* StringTrimTests.swift in Sources */,
 				03DB65FA1DEF80DA00BB9A1F /* IntRandomTests.swift in Sources */,
+				03C466A41DF0BAEA00469BAE /* ArrayExtensionsTests.swift in Sources */,
 				03FB45A11DEF639800C57747 /* StringIsAlphaNumericTests.swift in Sources */,
 				03FB45A31DEF639800C57747 /* StringLettersOnlyTests.swift in Sources */,
 				03FB45AF1DEF741E00C57747 /* BoolExtensionsTests.swift in Sources */,

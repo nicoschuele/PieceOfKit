@@ -11,10 +11,17 @@ import Foundation
 /// Useful extensions for the Bool class
 public extension Array {
     
+    /**
+     Gets a random item from an Array
+     
+     - Returns: a random `Element?`
+     */
     public func random() -> Element? {
-        guard count > 0 else { return nil }
-        let index = Int(arc4random_uniform(UInt32(self.count)))
-        return self[index]
+        guard count > 0 else {
+            return nil
+        }
+        
+        return self[Int(arc4random_uniform(UInt32(self.count)))]
     }
     
 }
