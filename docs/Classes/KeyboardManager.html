@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KeyboardManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/KeyboardManager" class="dashAnchor"></a>
+    <a title="KeyboardManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        KeyboardManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/KeyboardManager.html">KeyboardManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/StringDateFormat.html">StringDateFormat</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>KeyboardManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">KeyboardManager</span></code></pre>
+
+                </div>
+              </div>
+            <p>Push/pull views when the keyboard appears and disappears.</p>
+
+<p>In your UIViewController, add a KeyboardManager property:</p>
+
+<pre class="highlight plaintext"><code>   var kb: KeyboardManager?
+</code></pre>
+
+<p>In <code>viewWillAppear(_:)</code>, initialize it and use the according method to subscribe to the <code>UIKeyboardWillShow</code> notification:</p>
+
+<pre class="highlight plaintext"><code>   override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+
+       kb = KeyboardManager(viewsToPushUp: [textField, button])
+       kb?.pushViewsUpWhenKeyboardWillShow()
+   }
+</code></pre>
+
+<p>The technique is the same for <code>viewWillDisappear(_:)</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC10PieceOfKit15KeyboardManager16notifyFromObjectGSqP__"></a>
+                    <a name="//apple_ref/swift/Property/notifyFromObject" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC10PieceOfKit15KeyboardManager16notifyFromObjectGSqP__">notifyFromObject</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets which object should trigger the notification (default to all with <code>nil</code>)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">notifyFromObject</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC10PieceOfKit15KeyboardManager13viewsToPushUpGSaCSo6UIView_"></a>
+                    <a name="//apple_ref/swift/Property/viewsToPushUp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC10PieceOfKit15KeyboardManager13viewsToPushUpGSaCSo6UIView_">viewsToPushUp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The arrays of views that will be moved</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">viewsToPushUp</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIView</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC10PieceOfKit15KeyboardManagercFT13viewsToPushUpGSaCSo6UIView_16notifyFromObjectGSqP___S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(viewsToPushUp:notifyFromObject:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10PieceOfKit15KeyboardManagercFT13viewsToPushUpGSaCSo6UIView_16notifyFromObjectGSqP___S0_">init(viewsToPushUp:notifyFromObject:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Init a KeyboardManager</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter viewsToPushUp: the arrays of views to move up/down
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter notifyFromObject: which object should trigger the notification (default to all with <code>nil</code>)
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">viewsToPushUp</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIView</span><span class="p">],</span> <span class="nv">notifyFromObject</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewsToPushUp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the arrays of views to move up/down</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>notifyFromObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>which object should trigger the notification (default to all with <code>nil</code>)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC10PieceOfKit15KeyboardManager31pushViewsUpWhenKeyboardWillShowFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/pushViewsUpWhenKeyboardWillShow()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10PieceOfKit15KeyboardManager31pushViewsUpWhenKeyboardWillShowFT_T_">pushViewsUpWhenKeyboardWillShow()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Subscribe to the UIKeyboardWillShow notification and pushes the selected view up by the height of the keyboard</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pushViewsUpWhenKeyboardWillShow</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC10PieceOfKit15KeyboardManager33pullViewsDownWhenKeyboardWillHideFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/pullViewsDownWhenKeyboardWillHide()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10PieceOfKit15KeyboardManager33pullViewsDownWhenKeyboardWillHideFT_T_">pullViewsDownWhenKeyboardWillHide()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Subscribe to the UIKeyboardWillHide notification and pulls the selected view down by the height of the keyboard</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pullViewsDownWhenKeyboardWillHide</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC10PieceOfKit15KeyboardManager36stopListeningToKeyboardNotificationsFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/stopListeningToKeyboardNotifications()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10PieceOfKit15KeyboardManager36stopListeningToKeyboardNotificationsFT_T_">stopListeningToKeyboardNotifications()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unsubscribe from the keyboard notifications</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopListeningToKeyboardNotifications</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-12-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

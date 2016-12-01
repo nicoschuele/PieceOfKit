@@ -18,7 +18,7 @@ DerivedData/
 xcuserdata/
 
 ## Documentation
-docs/
+# docs/
 
 ## Other
 *.moved-aside

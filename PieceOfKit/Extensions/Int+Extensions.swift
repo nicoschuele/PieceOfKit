@@ -38,7 +38,11 @@ public extension Int {
     
     //MARK: Static methods
     
-    
+    /**
+     Returns a random number within a `ClosedRange<Int>` (like `1...10`)
+     
+     - Returns: random `Int`
+     */
     public static func randomNumber(range: ClosedRange<Int> = 1...6) -> Int {
         let min = range.lowerBound
         let max = range.upperBound
