@@ -25,4 +25,17 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertFalse(string5.isBlank)
     }
     
+    func testToBool() {
+        let string = "true"
+        let string2 = "TRUE"
+        let string3 = "none"
+        let string4 = "false"
+        let string5 = " true "
+        
+        XCTAssertTrue(string.toBool())
+        XCTAssertTrue(string2.toBool())
+        XCTAssertFalse(string3.toBool())
+        XCTAssertFalse(string4.toBool())
+        XCTAssertFalse(string5.toBool())
+    }
 }
