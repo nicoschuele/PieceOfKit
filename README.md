@@ -17,6 +17,8 @@ master | development
 
 ## Documentation & Usage
 
+Documentation at [nicoschuele.github.io/PieceOfKit/](https://nicoschuele.github.io/PieceOfKit/)
+
 ...coming soon...
 
 ## Contribute
