@@ -12,7 +12,7 @@ import Foundation
 public extension Array {
     
     /**
-     Gets a random item from an Array
+     Gets a random item from the array
      
      - Returns: a random `Element?`
      */
@@ -22,6 +22,13 @@ public extension Array {
         }
         
         return self[Int(arc4random_uniform(UInt32(self.count)))]
+    }
+    
+    /**
+     Inserts a new `Element` at the beginning of the array
+     */
+    public mutating func prepend(_ newElement: Element) {
+        insert(newElement, at: 0)
     }
     
 }

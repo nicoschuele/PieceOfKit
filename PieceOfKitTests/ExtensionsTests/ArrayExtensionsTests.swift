@@ -30,4 +30,10 @@ class ArrayExtensionsTests: XCTestCase {
         XCTAssertTrue(array.contains(5))
     }
     
+    func testPrepend() {
+        var array = [1,2,3,4]
+        array.prepend(5)
+        XCTAssertEqual(array[0], 5)
+    }
+    
 }
