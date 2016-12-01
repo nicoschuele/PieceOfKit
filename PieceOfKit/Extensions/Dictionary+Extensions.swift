@@ -41,4 +41,20 @@ public extension Dictionary {
         }
         return output
     }
+    
+    /**
+     Converts the `Dictionary` into a JSON formatted string
+     
+     - Returns: a `String` representation of the JSONified `Dictionary`
+    */
+    public func toJSONString() -> String? {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+            return String(data: jsonData, encoding: .utf8)
+        } catch {
+            return nil
+        }
+    }
+    
 }
+
