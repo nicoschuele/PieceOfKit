@@ -17,3 +17,6 @@ xcode_sdk: iphonesimulator10.1
 
 script:
   - travis_retry xcodebuild test -project PieceOfKit.xcodeproj -scheme "PieceOfKitTests" -sdk iphonesimulator -destination "name=iPhone SE"
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
