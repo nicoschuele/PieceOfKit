@@ -41,6 +41,12 @@ public extension String {
         return !isEmpty && range(of: "[^a-zA-Z]", options: .regularExpression) == nil
     }
 
+    /**
+     Tells if the string contains only whitespaces and newlines
+     */
+    public var isBlank: Bool {
+        return self.trim(shouldTrimNewLineCharacters: true).isEmpty
+    }
     
     //MARK: Instance methods
     

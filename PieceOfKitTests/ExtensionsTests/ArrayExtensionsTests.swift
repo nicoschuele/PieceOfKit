@@ -2,8 +2,8 @@
 //  ArrayExtensionsTests.swift
 //  PieceOfKit
 //
-//  Created by Nico Schuele on 01.12.16.
-//  Copyright © 2016 Nico Schuele. All rights reserved.
+//  Copyright © 2016 Nico Schuele.
+//  Licensed under the Apache License, Version 2.0.
 //
 
 import XCTest
