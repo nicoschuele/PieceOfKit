@@ -9,6 +9,7 @@ A collection of useful extensions and helper methods for iOS Swift 3 developers.
 master | development
 ------ | -----------
 [![Build Status](https://travis-ci.org/nicoschuele/PieceOfKit.svg?branch=master)](https://travis-ci.org/nicoschuele/PieceOfKit) | [![Build Status](https://travis-ci.org/nicoschuele/PieceOfKit.svg?branch=development)](https://travis-ci.org/nicoschuele/PieceOfKit)
+[![codecov](https://codecov.io/gh/nicoschuele/PieceOfKit/branch/master/graph/badge.svg)](https://codecov.io/gh/nicoschuele/PieceOfKit) | [![codecov](https://codecov.io/gh/nicoschuele/PieceOfKit/branch/development/graph/badge.svg)](https://codecov.io/gh/nicoschuele/PieceOfKit)
 
 ## Installation
 
