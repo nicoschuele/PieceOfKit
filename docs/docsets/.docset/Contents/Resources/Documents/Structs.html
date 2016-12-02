@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Classes  Reference</title>
+    <title>Structs  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,7 +10,7 @@
     
   </head>
   <body>
-    <a title="Classes  Reference"></a>
+    <a title="Structs  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html"> Docs</a> (100% documented)</p>
@@ -20,7 +20,7 @@
       <p id="breadcrumbs">
         <a href="index.html"> Reference</a>
         <img id="carat" src="img/carat.png" />
-        Classes  Reference
+        Structs  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -81,8 +81,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Classes</h1>
-            <p>The following classes are available globally.</p>
+            <h1>Structs</h1>
+            <p>The following structs are available globally.</p>
 
           </section>
           <section class="section task-group-section">
@@ -91,9 +91,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C10PieceOfKit15KeyboardManager"></a>
-                    <a name="//apple_ref/swift/Class/KeyboardManager" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C10PieceOfKit15KeyboardManager">KeyboardManager</a>
+                    <a name="/s:V10PieceOfKit9RGBAColor"></a>
+                    <a name="//apple_ref/swift/Struct/RGBAColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V10PieceOfKit9RGBAColor">RGBAColor</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -101,33 +101,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Push/pull views when the keyboard appears and disappears.</p>
+                        <p>Simple structure to work with RGB(+alpha) colors</p>
 
-<p>In your UIViewController, add a KeyboardManager property:</p>
-
-<pre class="highlight plaintext"><code>   var kb: KeyboardManager?
-</code></pre>
-
-<p>In <code>viewWillAppear(_:)</code>, initialize it and use the according method to subscribe to the show and hide notifications:</p>
-
-<pre class="highlight plaintext"><code>   override func viewWillAppear(_ animated: Bool) {
-       super.viewWillAppear(animated)
-
-       kb = KeyboardManager(viewsToPushUp: [textField, button])
-       kb?.pushViewsUpWhenKeyboardWillShow()
-       kb?.pullViewsDownWhenKeyboardWillHide()
-   }
-</code></pre>
-
-<p>Although not necessary anymore, if you want to stop listening to the notifications, you can call <code>kb?.stopListeningToKeyboardNotifications()</code> within <code>viewWillDisappear(_:)</code> for example.</p>
-
-                        <a href="Classes/KeyboardManager.html" class="slightly-smaller">See more</a>
+                        <a href="Structs/RGBAColor.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">KeyboardManager</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RGBAColor</span></code></pre>
 
                         </div>
                       </div>

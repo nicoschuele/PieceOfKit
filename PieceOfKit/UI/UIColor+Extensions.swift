@@ -6,24 +6,21 @@
 //  Licensed under the Apache License, Version 2.0.
 //
 
-import Foundation
+import UIKit
 
 /// Useful extensions for the UIColor class
 public extension UIColor {
     
     /**
-     Inits a `UIColor` from RGB `Int` values + alpha from CGFloat (defaults to `1`)
+     Inits a `UIColor` from RGB `Int` values + alpha from CGFloat
      
-     - Parameter r: Red value between 0-255
-     - Parameter g: Green value between 0-255
-     - Parameter b: Blue value between 0-255
-     - Parameter a: Alpha value between 0.0-1.0
+     - Parameter rgbaColor: The levels of color for red/green/blue + alpha
      */
-    public convenience init(r: Int, g: Int, b: Int, a: CGFloat = 1) {
-        var re = r > 255 ? 255 : r
-        var gr = g > 255 ? 255 : g
-        var bl = b > 255 ? 255 : b
-        var al = a > 1.0 ? 1.0 : a
+    public convenience init(rgbaColor: RGBAColor) {
+        var re = rgbaColor.red > 255 ? 255 : rgbaColor.red
+        var gr = rgbaColor.green > 255 ? 255 : rgbaColor.green
+        var bl = rgbaColor.blue > 255 ? 255 : rgbaColor.blue
+        var al = rgbaColor.alpha > 1.0 ? 1.0 : rgbaColor.alpha
         re = re < 0 ? 0 : re
         gr = gr < 0 ? 0 : gr
         bl = bl < 0 ? 0 : bl
