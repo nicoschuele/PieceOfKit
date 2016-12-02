@@ -1,5 +1,5 @@
 //
-//  Float+Extensions.swift
+//  Double+Extensions.swift
 //  PieceOfKit
 //
 //  Copyright © 2016 Nico Schuele.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-/// Useful extensions for the Float class
-public extension Float {
+/// Useful extensions for the Double class
+public extension Double {
     
     /**
      Converts to `String`
      
-     - Returns: the `Float` as a `String`
-     */
+     - Returns: the `Double` as a `String`
+     */    
     public func toString() -> String {
         return "\(self)"
     }
