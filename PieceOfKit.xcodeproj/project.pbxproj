@@ -16,6 +16,8 @@
 		03C466AA1DF216B100469BAE /* FloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466A91DF216B100469BAE /* FloatExtensionsTests.swift */; };
 		03C466AC1DF2174E00469BAE /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466AB1DF2174E00469BAE /* Double+Extensions.swift */; };
 		03C466AE1DF217C000469BAE /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466AD1DF217C000469BAE /* DoubleExtensionsTests.swift */; };
+		03C466B01DF2185800469BAE /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466AF1DF2185800469BAE /* CGFloat+Extensions.swift */; };
+		03C466B21DF2189200469BAE /* CGFloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466B11DF2189200469BAE /* CGFloatExtensionsTests.swift */; };
 		03D50AC51DF204630057EF3E /* StringDateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D50AC41DF204630057EF3E /* StringDateFormat.swift */; };
 		03D50AC71DF204DB0057EF3E /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D50AC61DF204DB0057EF3E /* RGBAColor.swift */; };
 		03D50AC91DF207FA0057EF3E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D50AC81DF207FA0057EF3E /* UIColor+Extensions.swift */; };
@@ -63,6 +65,8 @@
 		03C466A91DF216B100469BAE /* FloatExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatExtensionsTests.swift; path = ExtensionsTests/FloatExtensionsTests.swift; sourceTree = "<group>"; };
 		03C466AB1DF2174E00469BAE /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+Extensions.swift"; path = "PieceOfKit/Extensions/Double+Extensions.swift"; sourceTree = "<group>"; };
 		03C466AD1DF217C000469BAE /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoubleExtensionsTests.swift; path = ExtensionsTests/DoubleExtensionsTests.swift; sourceTree = "<group>"; };
+		03C466AF1DF2185800469BAE /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGFloat+Extensions.swift"; path = "PieceOfKit/Extensions/CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		03C466B11DF2189200469BAE /* CGFloatExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGFloatExtensionsTests.swift; path = ExtensionsTests/CGFloatExtensionsTests.swift; sourceTree = "<group>"; };
 		03D50AC41DF204630057EF3E /* StringDateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringDateFormat.swift; path = Types/StringDateFormat.swift; sourceTree = "<group>"; };
 		03D50AC61DF204DB0057EF3E /* RGBAColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RGBAColor.swift; path = Types/RGBAColor.swift; sourceTree = "<group>"; };
 		03D50AC81DF207FA0057EF3E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "UI/UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 			children = (
 				03DB65FB1DF03D4400BB9A1F /* Array+Extensions.swift */,
 				03FB45B01DEF743500C57747 /* Bool+Extensions.swift */,
+				03C466AF1DF2185800469BAE /* CGFloat+Extensions.swift */,
 				03FB45901DEF638400C57747 /* Date+Extensions.swift */,
 				03FB45B41DEF74AE00C57747 /* Dictionary+Extensions.swift */,
 				03C466AB1DF2174E00469BAE /* Double+Extensions.swift */,
@@ -185,6 +190,7 @@
 			children = (
 				03C466A31DF0BAEA00469BAE /* ArrayExtensionsTests.swift */,
 				03FB45AE1DEF741E00C57747 /* BoolExtensionsTests.swift */,
+				03C466B11DF2189200469BAE /* CGFloatExtensionsTests.swift */,
 				03FB45961DEF639800C57747 /* DateExtensionsTests.swift */,
 				03DB65F71DEF763E00BB9A1F /* DictionaryExtensionsTests.swift */,
 				03C466AD1DF217C000469BAE /* DoubleExtensionsTests.swift */,
@@ -325,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C466AC1DF2174E00469BAE /* Double+Extensions.swift in Sources */,
+				03C466B01DF2185800469BAE /* CGFloat+Extensions.swift in Sources */,
 				03FB45951DEF638400C57747 /* String+Extensions.swift in Sources */,
 				03FB45B21DEF743500C57747 /* Bool+Extensions.swift in Sources */,
 				03D50AC51DF204630057EF3E /* StringDateFormat.swift in Sources */,
@@ -352,6 +359,7 @@
 				03FB45A51DEF639800C57747 /* StringTrimTests.swift in Sources */,
 				03DB65FA1DEF80DA00BB9A1F /* IntRandomTests.swift in Sources */,
 				03C466A41DF0BAEA00469BAE /* ArrayExtensionsTests.swift in Sources */,
+				03C466B21DF2189200469BAE /* CGFloatExtensionsTests.swift in Sources */,
 				03FB45A11DEF639800C57747 /* StringIsAlphaNumericTests.swift in Sources */,
 				03FB45A31DEF639800C57747 /* StringLettersOnlyTests.swift in Sources */,
 				03C466AA1DF216B100469BAE /* FloatExtensionsTests.swift in Sources */,

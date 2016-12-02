@@ -1,0 +1,23 @@
+//
+//  CGFloat+Extensions.swift
+//  PieceOfKit
+//
+//  Copyright © 2016 Nico Schuele.
+//  Licensed under the Apache License, Version 2.0.
+//
+
+import Foundation
+
+/// Useful extensions for the CGFloat class
+public extension CGFloat {
+    
+    /**
+     Converts to `String`
+     
+     - Returns: the `Float` as a `String`
+     */
+    public func toString() -> String {
+        return "\(self)"
+    }
+    
+}
