@@ -1,6 +1,6 @@
 # PieceOfKit
 
-[![Swift Version](https://img.shields.io/badge/Swift-3.0.x-orange.svg)]()
+[![Swift Version](https://img.shields.io/badge/Swift-3.0.x-orange.svg)]() [![codebeat badge](https://codebeat.co/badges/910dc184-e643-4bbe-88d1-3a37cf71be5e)](https://codebeat.co/projects/github-com-nicoschuele-pieceofkit)
 
 A collection of useful extensions and helper methods for iOS Swift 3 developers.
 
