@@ -12,6 +12,7 @@
 		03B8C6841DEA4F510067B058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B8C6831DEA4F510067B058 /* UIKit.framework */; };
 		03C466A41DF0BAEA00469BAE /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466A31DF0BAEA00469BAE /* ArrayExtensionsTests.swift */; };
 		03C466A61DF0C3C200469BAE /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466A51DF0C3C200469BAE /* StringExtensionsTests.swift */; };
+		03D50AC51DF204630057EF3E /* StringDateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D50AC41DF204630057EF3E /* StringDateFormat.swift */; };
 		03DB65F81DEF763E00BB9A1F /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB65F71DEF763E00BB9A1F /* DictionaryExtensionsTests.swift */; };
 		03DB65FA1DEF80DA00BB9A1F /* IntRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB65F91DEF80DA00BB9A1F /* IntRandomTests.swift */; };
 		03DB65FC1DF03D4400BB9A1F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB65FB1DF03D4400BB9A1F /* Array+Extensions.swift */; };
@@ -53,6 +54,7 @@
 		03B8C6831DEA4F510067B058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03C466A31DF0BAEA00469BAE /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtensionsTests.swift; path = ExtensionsTests/ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 		03C466A51DF0C3C200469BAE /* StringExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensionsTests.swift; path = ExtensionsTests/StringExtensionsTests.swift; sourceTree = "<group>"; };
+		03D50AC41DF204630057EF3E /* StringDateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringDateFormat.swift; path = Types/StringDateFormat.swift; sourceTree = "<group>"; };
 		03DB65F71DEF763E00BB9A1F /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryExtensionsTests.swift; path = ExtensionsTests/DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
 		03DB65F91DEF80DA00BB9A1F /* IntRandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntRandomTests.swift; path = ExtensionsTests/IntRandomTests.swift; sourceTree = "<group>"; };
 		03DB65FB1DF03D4400BB9A1F /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "PieceOfKit/Extensions/Array+Extensions.swift"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		03746D881DE670E800AA9D5C /* PieceOfKit */ = {
 			isa = PBXGroup;
 			children = (
+				03D50AC31DF204340057EF3E /* Types */,
 				03FB458D1DEF630500C57747 /* UI */,
 				03FB458B1DEF62A900C57747 /* Extensions */,
 				03746D891DE670E800AA9D5C /* PieceOfKit.h */,
@@ -140,6 +143,14 @@
 				03B8C6831DEA4F510067B058 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03D50AC31DF204340057EF3E /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				03D50AC41DF204630057EF3E /* StringDateFormat.swift */,
+			);
+			name = Types;
 			sourceTree = "<group>";
 		};
 		03FB458B1DEF62A900C57747 /* Extensions */ = {
@@ -301,6 +312,7 @@
 				03FB45951DEF638400C57747 /* String+Extensions.swift in Sources */,
 				03FB45B21DEF743500C57747 /* Bool+Extensions.swift in Sources */,
 				03FB45B31DEF743500C57747 /* UIColor+Extensions.swift in Sources */,
+				03D50AC51DF204630057EF3E /* StringDateFormat.swift in Sources */,
 				03DB65FC1DF03D4400BB9A1F /* Array+Extensions.swift in Sources */,
 				03FB45B51DEF74AE00C57747 /* Dictionary+Extensions.swift in Sources */,
 				03FB458F1DEF636900C57747 /* KeyboardManager.swift in Sources */,
