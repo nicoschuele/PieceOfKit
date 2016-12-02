@@ -53,14 +53,14 @@ public class KeyboardManager {
      Subscribe to the UIKeyboardWillShow notification and pushes the selected view up by the height of the keyboard
      */
     public func pushViewsUpWhenKeyboardWillShow() {
-        notificationCenter.addObserver(self, selector: #selector(KeyboardManager.pushViews(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: notifyFromObject)
+        addObserver(NSNotification.Name.UIKeyboardWillShow)
     }
     
     /**
      Subscribe to the UIKeyboardWillHide notification and pulls the selected view down by the height of the keyboard
      */
     public func pullViewsDownWhenKeyboardWillHide() {
-        notificationCenter.addObserver(self, selector: #selector(KeyboardManager.pushViews(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: notifyFromObject)
+        addObserver(NSNotification.Name.UIKeyboardWillHide)
     }
     
     /**
@@ -80,18 +80,11 @@ public class KeyboardManager {
      */
     @objc internal func pushViews(_ notification: NSNotification) {
         if let keyboardHeight = getKeyboardHeight(notification: notification) {
-            print("Keyboard: \(isKeyboardUp)")
+            let kbHeight = isKeyboardUp ? keyboardHeight : keyboardHeight * -1
             for view in viewsToPushUp {
-                if isKeyboardUp {
-                    view.frame.origin.y += keyboardHeight
-                } else {
-                    view.frame.origin.y -= keyboardHeight
-                }
+                view.frame.origin.y += kbHeight
             }
-            isKeyboardUp.toggle()
-            print("Keyboard: \(isKeyboardUp)")
-        } else {
-            print("No height???")
+            isKeyboardUp.toggle()            
         }
     }
     
@@ -100,6 +93,10 @@ public class KeyboardManager {
             return keyboardRectValue.height
         }
         return nil
+    }
+    
+    private func addObserver(_ name: NSNotification.Name) {
+        notificationCenter.addObserver(self, selector: #selector(KeyboardManager.pushViews(_:)), name: name, object: notifyFromObject)
     }
     
 }
