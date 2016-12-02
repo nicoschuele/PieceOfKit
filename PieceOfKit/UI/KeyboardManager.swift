@@ -15,16 +15,17 @@ import UIKit
  
         var kb: KeyboardManager?
  
- In `viewWillAppear(_:)`, initialize it and use the according method to subscribe to the `UIKeyboardWillShow` notification:
+ In `viewWillAppear(_:)`, initialize it and use the according method to subscribe to the show and hide notifications:
  
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
  
             kb = KeyboardManager(viewsToPushUp: [textField, button])
             kb?.pushViewsUpWhenKeyboardWillShow()
+            kb?.pullViewsDownWhenKeyboardWillHide()
         }
 
- The technique is the same for `viewWillDisappear(_:)`.
+ Although not necessary anymore, if you want to stop listening to the notifications, you can call `kb?.stopListeningToKeyboardNotifications()` within `viewWillDisappear(_:)` for example.
  
  */
 public class KeyboardManager {
@@ -34,6 +35,8 @@ public class KeyboardManager {
     public var notifyFromObject: Any?
     /// The arrays of views that will be moved
     public var viewsToPushUp: [UIView] = []
+    
+    private var isKeyboardUp = false
     
     /**
      Init a KeyboardManager
@@ -50,14 +53,14 @@ public class KeyboardManager {
      Subscribe to the UIKeyboardWillShow notification and pushes the selected view up by the height of the keyboard
      */
     public func pushViewsUpWhenKeyboardWillShow() {
-        notificationCenter.addObserver(self, selector: #selector(PieceOfKit.KeyboardManager.pushViewsUp(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: notifyFromObject)
+        notificationCenter.addObserver(self, selector: #selector(KeyboardManager.pushViews(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: notifyFromObject)
     }
     
     /**
      Subscribe to the UIKeyboardWillHide notification and pulls the selected view down by the height of the keyboard
      */
     public func pullViewsDownWhenKeyboardWillHide() {
-        notificationCenter.addObserver(self, selector: #selector(pushViewsDown(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: notifyFromObject)
+        notificationCenter.addObserver(self, selector: #selector(KeyboardManager.pushViews(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: notifyFromObject)
     }
     
     /**
@@ -70,26 +73,35 @@ public class KeyboardManager {
     
     // MARK: private implementation
     
-    @objc internal func pushViewsUp(_ notification: NSNotification) {
-        if let keyboardRectValue = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            let keyboardHeight = keyboardRectValue.height
-            
+    /**
+     Pushes views up or down.
+     
+     - Parameter notification: `NSNotification`
+     */
+    @objc internal func pushViews(_ notification: NSNotification) {
+        if let keyboardHeight = getKeyboardHeight(notification: notification) {
+            print("Keyboard: \(isKeyboardUp)")
             for view in viewsToPushUp {
-                view.frame.origin.y -= keyboardHeight
+                if isKeyboardUp {
+                    view.frame.origin.y += keyboardHeight
+                } else {
+                    view.frame.origin.y -= keyboardHeight
+                }
             }
+            isKeyboardUp.toggle()
+            print("Keyboard: \(isKeyboardUp)")
+        } else {
+            print("No height???")
         }
     }
     
-    @objc internal func pushViewsDown(_ notification: NSNotification) {
+    private func getKeyboardHeight(notification: NSNotification) -> CGFloat? {
         if let keyboardRectValue = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            let keyboardHeight = keyboardRectValue.height
-            
-            for view in viewsToPushUp {
-                view.frame.origin.y += keyboardHeight
-            }
+            return keyboardRectValue.height
         }
-        
+        return nil
     }
+    
 }
 
 

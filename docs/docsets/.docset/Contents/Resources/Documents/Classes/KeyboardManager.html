@@ -88,17 +88,18 @@
 <pre class="highlight plaintext"><code>   var kb: KeyboardManager?
 </code></pre>
 
-<p>In <code>viewWillAppear(_:)</code>, initialize it and use the according method to subscribe to the <code>UIKeyboardWillShow</code> notification:</p>
+<p>In <code>viewWillAppear(_:)</code>, initialize it and use the according method to subscribe to the show and hide notifications:</p>
 
 <pre class="highlight plaintext"><code>   override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
 
        kb = KeyboardManager(viewsToPushUp: [textField, button])
        kb?.pushViewsUpWhenKeyboardWillShow()
+       kb?.pullViewsDownWhenKeyboardWillHide()
    }
 </code></pre>
 
-<p>The technique is the same for <code>viewWillDisappear(_:)</code>.</p>
+<p>Although not necessary anymore, if you want to stop listening to the notifications, you can call <code>kb?.stopListeningToKeyboardNotifications()</code> within <code>viewWillDisappear(_:)</code> for example.</p>
 
           </section>
           <section class="section task-group-section">
