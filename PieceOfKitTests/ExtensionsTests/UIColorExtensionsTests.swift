@@ -13,12 +13,12 @@ class UIColorExtensionsTests: XCTestCase {
     
     func testInit() {
         let red = UIColor.red
-        let r = UIColor(r: 255, g: 0, b: 0)
+        let r = UIColor(rgbaColor: RGBAColor(red: 255, green: 0, blue: 0, alpha: 1.0))
         XCTAssertEqual(r, red)
     }
     
     func testGetIndividualColors() {
-        let testColor = UIColor(r: 123, g: 97, b: 12, a: 0.5)
+        let testColor = UIColor(rgbaColor: RGBAColor(red: 123, green: 97, blue: 12, alpha: 0.5))
         
         XCTAssertEqual(testColor.getRed(), 123)
         XCTAssertEqual(testColor.getGreen(), 97)
@@ -27,7 +27,8 @@ class UIColorExtensionsTests: XCTestCase {
     }
     
     func testToString() {
-        let testColor = UIColor(r: 123, g: 97, b: 12, a: 0.5)
+        let testColor = UIColor(rgbaColor: RGBAColor(red: 123, green: 97, blue: 12, alpha: 0.5))
+        
         let testColorString = testColor.toString()
         let controlString = "Red: 123 - Green: 97 - Blue: 12 - Alpha: 0.5"
         
@@ -35,7 +36,7 @@ class UIColorExtensionsTests: XCTestCase {
     }
     
     func testLimits() {
-        let testColor = UIColor(r: 300, g: -10, b: 256, a: 1.1)
+        let testColor = UIColor(rgbaColor: .init(red: 300, green: -10, blue: 256, alpha: 1.1))
         
         XCTAssertEqual(testColor.getRed(), 255)
         XCTAssertEqual(testColor.getGreen(), 0)
