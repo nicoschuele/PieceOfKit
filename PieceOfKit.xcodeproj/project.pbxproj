@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		03746D901DE670E800AA9D5C /* PieceOfKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03746D861DE670E800AA9D5C /* PieceOfKit.framework */; };
 		03746D971DE670E800AA9D5C /* PieceOfKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 03746D891DE670E800AA9D5C /* PieceOfKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03B857C01DF349C100CF476B /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B857BF1DF349C100CF476B /* DateFormatter+Extensions.swift */; };
+		03B857C21DF34CB500CF476B /* DateFormatterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B857C11DF34CB500CF476B /* DateFormatterExtensionsTests.swift */; };
 		03B8C6841DEA4F510067B058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B8C6831DEA4F510067B058 /* UIKit.framework */; };
 		03C466A41DF0BAEA00469BAE /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466A31DF0BAEA00469BAE /* ArrayExtensionsTests.swift */; };
 		03C466A61DF0C3C200469BAE /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466A51DF0C3C200469BAE /* StringExtensionsTests.swift */; };
@@ -58,6 +60,8 @@
 		03746D8A1DE670E800AA9D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03746D8F1DE670E800AA9D5C /* PieceOfKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PieceOfKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03746D961DE670E800AA9D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03B857BF1DF349C100CF476B /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Extensions.swift"; path = "PieceOfKit/Extensions/DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		03B857C11DF34CB500CF476B /* DateFormatterExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatterExtensionsTests.swift; path = ExtensionsTests/DateFormatterExtensionsTests.swift; sourceTree = "<group>"; };
 		03B8C6831DEA4F510067B058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03C466A31DF0BAEA00469BAE /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtensionsTests.swift; path = ExtensionsTests/ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 		03C466A51DF0C3C200469BAE /* StringExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensionsTests.swift; path = ExtensionsTests/StringExtensionsTests.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 				03FB45B01DEF743500C57747 /* Bool+Extensions.swift */,
 				03C466AF1DF2185800469BAE /* CGFloat+Extensions.swift */,
 				03FB45901DEF638400C57747 /* Date+Extensions.swift */,
+				03B857BF1DF349C100CF476B /* DateFormatter+Extensions.swift */,
 				03FB45B41DEF74AE00C57747 /* Dictionary+Extensions.swift */,
 				03C466AB1DF2174E00469BAE /* Double+Extensions.swift */,
 				03C466A71DF2162800469BAE /* Float+Extensions.swift */,
@@ -192,6 +197,7 @@
 				03FB45AE1DEF741E00C57747 /* BoolExtensionsTests.swift */,
 				03C466B11DF2189200469BAE /* CGFloatExtensionsTests.swift */,
 				03FB45961DEF639800C57747 /* DateExtensionsTests.swift */,
+				03B857C11DF34CB500CF476B /* DateFormatterExtensionsTests.swift */,
 				03DB65F71DEF763E00BB9A1F /* DictionaryExtensionsTests.swift */,
 				03C466AD1DF217C000469BAE /* DoubleExtensionsTests.swift */,
 				03C466A91DF216B100469BAE /* FloatExtensionsTests.swift */,
@@ -332,6 +338,7 @@
 			files = (
 				03C466AC1DF2174E00469BAE /* Double+Extensions.swift in Sources */,
 				03C466B01DF2185800469BAE /* CGFloat+Extensions.swift in Sources */,
+				03B857C01DF349C100CF476B /* DateFormatter+Extensions.swift in Sources */,
 				03FB45951DEF638400C57747 /* String+Extensions.swift in Sources */,
 				03FB45B21DEF743500C57747 /* Bool+Extensions.swift in Sources */,
 				03D50AC51DF204630057EF3E /* StringDateFormat.swift in Sources */,
@@ -356,6 +363,7 @@
 				03FB459F1DEF639800C57747 /* IntExtensionsTests.swift in Sources */,
 				03C466AE1DF217C000469BAE /* DoubleExtensionsTests.swift in Sources */,
 				03DB65F81DEF763E00BB9A1F /* DictionaryExtensionsTests.swift in Sources */,
+				03B857C21DF34CB500CF476B /* DateFormatterExtensionsTests.swift in Sources */,
 				03FB45A51DEF639800C57747 /* StringTrimTests.swift in Sources */,
 				03DB65FA1DEF80DA00BB9A1F /* IntRandomTests.swift in Sources */,
 				03C466A41DF0BAEA00469BAE /* ArrayExtensionsTests.swift in Sources */,
