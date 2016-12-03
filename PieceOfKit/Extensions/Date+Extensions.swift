@@ -101,8 +101,7 @@ public extension Date {
      - Returns: the number of days as `Double`
      */
     public func daysInBetweenDate(_ date: Date) -> Double {
-        let interval = Date.getTimeInterval(self, date)
-        return fabs(interval/86400)
+        return fabs(Date.getTimeInterval(self, date)/86400)
     }
     
     /**
@@ -113,8 +112,7 @@ public extension Date {
      - Returns: the number of hours as `Double`
      */
     public func hoursInBetweenDate(_ date: Date) -> Double {
-        let interval = Date.getTimeInterval(self, date)
-        return fabs(interval/3600)
+        return fabs(Date.getTimeInterval(self, date)/3600)
     }
     
     /**
@@ -125,8 +123,7 @@ public extension Date {
      - Returns: the number of minutes as `Double`
      */
     public func minutesInBetweenDate(_ date: Date) -> Double {
-        let interval = Date.getTimeInterval(self, date)
-        return fabs(interval/60)
+        return fabs(Date.getTimeInterval(self, date)/60)
     }
     
     /**
@@ -137,8 +134,7 @@ public extension Date {
      - Returns: the number of seconds as `Double`
      */
     public func secondsInBetweenDate(_ date: Date) -> Double {
-        let interval = Date.getTimeInterval(self, date)
-        return fabs(interval)
+        return fabs(Date.getTimeInterval(self, date))
     }
     
     /**
