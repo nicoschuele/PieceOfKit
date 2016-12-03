@@ -101,9 +101,8 @@ public extension Date {
      - Returns: the number of days as `Double`
      */
     public func daysInBetweenDate(_ date: Date) -> Double {
-        var diff = self.timeIntervalSince1970 - date.timeIntervalSince1970
-        diff = fabs(diff/86400)
-        return diff
+        let interval = Date.getTimeInterval(self, date)
+        return fabs(interval/86400)
     }
     
     /**
@@ -114,9 +113,8 @@ public extension Date {
      - Returns: the number of hours as `Double`
      */
     public func hoursInBetweenDate(_ date: Date) -> Double {
-        var diff = self.timeIntervalSince1970 - date.timeIntervalSince1970
-        diff = fabs(diff/3600)
-        return diff
+        let interval = Date.getTimeInterval(self, date)
+        return fabs(interval/3600)
     }
     
     /**
@@ -127,9 +125,8 @@ public extension Date {
      - Returns: the number of minutes as `Double`
      */
     public func minutesInBetweenDate(_ date: Date) -> Double {
-        var diff = self.timeIntervalSince1970 - date.timeIntervalSince1970
-        diff = fabs(diff/60)
-        return diff
+        let interval = Date.getTimeInterval(self, date)
+        return fabs(interval/60)
     }
     
     /**
@@ -140,9 +137,8 @@ public extension Date {
      - Returns: the number of seconds as `Double`
      */
     public func secondsInBetweenDate(_ date: Date) -> Double {
-        var diff = self.timeIntervalSince1970 - date.timeIntervalSince1970
-        diff = fabs(diff)
-        return diff
+        let interval = Date.getTimeInterval(self, date)
+        return fabs(interval)
     }
     
     /**
@@ -224,6 +220,13 @@ public extension Date {
     public static func fromString(_ string: String, stringDateFormat format: StringDateFormat = StringDateFormat.yyyyMMdd) -> Date? {
         let dateFormatter = DateFormatter.fromStringDateFormat(format)
         return dateFormatter.date(from: string)
+    }
+    
+    //MARK: Private methods
+    
+    /// Returns a time interval as `Double`
+    private static func getTimeInterval(_ dateOne: Date, _ dateTwo: Date) -> Double {
+        return dateOne.timeIntervalSince1970 - dateTwo.timeIntervalSince1970
     }
     
 }
