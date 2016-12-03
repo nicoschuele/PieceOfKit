@@ -205,7 +205,7 @@ public extension Date {
      
      - Parameter format: a `StringDateFormat`
      
-     - Returns: a `String` in the format YYYYMMDD or YYYYMMDDHHmm
+     - Returns: a `String` in the format YYYYMMDD, YYYYMMDDHHmm or YYYYMMDDHHmmss
      */
     public func toString(stringDateFormat format: StringDateFormat = StringDateFormat.YYYYMMDD) -> String {
         let dateFormatter = DateFormatter()
@@ -215,8 +215,9 @@ public extension Date {
             dateFormatter.dateFormat = "yyyyMMdd"
         case .YYYYMMDDHHmm:
             dateFormatter.dateFormat = "yyyyMMddHHmm"
+        case .YYYYMMDDHHmmss:
+            dateFormatter.dateFormat = "yyyyMMddHHmmss"
         }
-        
         return dateFormatter.string(from: self)
     }
     
@@ -237,6 +238,8 @@ public extension Date {
             dateFormatter.dateFormat = "yyyyMMdd"
         case .YYYYMMDDHHmm:
             dateFormatter.dateFormat = "yyyyMMddHHmm"
+        case .YYYYMMDDHHmmss:
+            dateFormatter.dateFormat = "yyyyMMddHHmmss"
         }
         
         return dateFormatter.date(from: string)

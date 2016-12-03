@@ -14,4 +14,6 @@ public enum StringDateFormat {
     case YYYYMMDD
     /// A date represented as YYYYMMDDHHmm (e.g. 201611292219)
     case YYYYMMDDHHmm
+    /// A date represented as YYYYMMDDHHmmss (e.g. 20161129221912)
+    case YYYYMMDDHHmmss
 }
