@@ -22,11 +22,11 @@ public extension DateFormatter {
         let dateFormatter = DateFormatter()
         
         switch stringDateFormat {
-        case .YYYYMMDD:
+        case .yyyyMMdd:
             dateFormatter.dateFormat = "yyyyMMdd"
-        case .YYYYMMDDHHmm:
+        case .yyyyMMddHHmm:
             dateFormatter.dateFormat = "yyyyMMddHHmm"
-        case .YYYYMMDDHHmmss:
+        case .yyyyMMddHHmmss:
             dateFormatter.dateFormat = "yyyyMMddHHmmss"
         }
         return dateFormatter

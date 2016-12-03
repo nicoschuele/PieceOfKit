@@ -12,7 +12,7 @@ import XCTest
 class DateFormatterExtensionsTests: XCTestCase {
     
     func testDateFormatterFromStringFormat() {
-        let formatter = DateFormatter.fromStringDateFormat(.YYYYMMDD)
+        let formatter = DateFormatter.fromStringDateFormat(.yyyyMMdd)
         XCTAssertEqual(formatter.dateFormat, "yyyyMMdd")
     }
     

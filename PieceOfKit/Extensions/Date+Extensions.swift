@@ -205,19 +205,10 @@ public extension Date {
      
      - Parameter format: a `StringDateFormat`
      
-     - Returns: a `String` in the format YYYYMMDD, YYYYMMDDHHmm or YYYYMMDDHHmmss
+     - Returns: a `String` in the format yyyyMMdd, yyyyMMddHHmm or yyyyMMddHHmmss
      */
-    public func toString(stringDateFormat format: StringDateFormat = StringDateFormat.YYYYMMDD) -> String {
-        let dateFormatter = DateFormatter()
-        
-        switch format {
-        case .YYYYMMDD:
-            dateFormatter.dateFormat = "yyyyMMdd"
-        case .YYYYMMDDHHmm:
-            dateFormatter.dateFormat = "yyyyMMddHHmm"
-        case .YYYYMMDDHHmmss:
-            dateFormatter.dateFormat = "yyyyMMddHHmmss"
-        }
+    public func toString(stringDateFormat format: StringDateFormat = StringDateFormat.yyyyMMdd) -> String {
+        let dateFormatter = DateFormatter.fromStringDateFormat(format)
         return dateFormatter.string(from: self)
     }
     
@@ -230,18 +221,8 @@ public extension Date {
      
      - Returns: a `Date`
      */
-    public static func dateFromString(_ string: String, stringDateFormat format: StringDateFormat = StringDateFormat.YYYYMMDD) -> Date? {
-        let dateFormatter = DateFormatter()
-        
-        switch format {
-        case .YYYYMMDD:
-            dateFormatter.dateFormat = "yyyyMMdd"
-        case .YYYYMMDDHHmm:
-            dateFormatter.dateFormat = "yyyyMMddHHmm"
-        case .YYYYMMDDHHmmss:
-            dateFormatter.dateFormat = "yyyyMMddHHmmss"
-        }
-        
+    public static func fromString(_ string: String, stringDateFormat format: StringDateFormat = StringDateFormat.yyyyMMdd) -> Date? {
+        let dateFormatter = DateFormatter.fromStringDateFormat(format)
         return dateFormatter.date(from: string)
     }
     
