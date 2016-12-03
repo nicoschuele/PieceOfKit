@@ -204,25 +204,25 @@ class DateExtensionsTests: XCTestCase {
     func testDaysInBetween() {
         let day = Date.fromString("20161201")
         let someDay = Date.fromString("20161201")?.addDays(3)
-        XCTAssertEqual(day?.daysInBetweenDate(someDay!), 3.0)
+        XCTAssertEqual(day?.inBetween(withDate: someDay!, unitOfTime: .day), 3.0)
     }
     
     func testHoursInBetween() {
         let day = Date.fromString("201612011400", stringDateFormat: .yyyyMMddHHmm)
         let someDay = Date.fromString("201612011400", stringDateFormat: .yyyyMMddHHmm)?.addHours(3)
-        XCTAssertEqual(day?.hoursInBetweenDate(someDay!), 3.0)
+        XCTAssertEqual(day?.inBetween(withDate: someDay!, unitOfTime: .hour), 3.0)
     }
     
     func testMinutesInBetween() {
         let day = Date.fromString("201612011400", stringDateFormat: .yyyyMMddHHmm)
         let someDay = Date.fromString("201612011400", stringDateFormat: .yyyyMMddHHmm)?.addMinutes(3)
-        XCTAssertEqual(day?.minutesInBetweenDate(someDay!), 3.0)
+        XCTAssertEqual(day?.inBetween(withDate: someDay!, unitOfTime: .minute), 3.0)
     }
     
     func testSecondsInBetween() {
         let day = Date.fromString("20161201140010", stringDateFormat: .yyyyMMddHHmmss)
         let someDay = Date.fromString("20161201140010", stringDateFormat: .yyyyMMddHHmmss)?.addMinutes(1)
-        XCTAssertEqual(day?.secondsInBetweenDate(someDay!), 60.0)
+        XCTAssertEqual(day?.inBetween(withDate: someDay!, unitOfTime: .second), 60.0)
     }
     
 }

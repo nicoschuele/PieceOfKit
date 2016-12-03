@@ -44,7 +44,7 @@ public extension Date {
     
     /// Returns true if Date is within this week
     public var isThisWeek: Bool {
-        return self.minutesInBetweenDate(Date()) <= Double(24 * 60 * 7)
+        return self.inBetween(withDate: Date(), unitOfTime: .minute) <= Double(24 * 60 * 7)
     }
     
     /// Returns the year component of a Date as `Int`
@@ -94,47 +94,15 @@ public extension Date {
     //MARK: Instance methods
     
     /**
-     Returns how many days have passed between the Date and another one
+     Returns how many `PieceOfKit.TimeUnit` have passed in between two dates
      
-     - Parameter date: The `Date` to compare against
+     - Parameter withDate: the `Date` to compare against
+     - Parameter unitOfTime: the `TimeUnit` to use for comparison
      
-     - Returns: the number of days as `Double`
+     - Returns: the time interval as a `Double`
      */
-    public func daysInBetweenDate(_ date: Date) -> Double {
-        return fabs(Date.getTimeInterval(self, date)/86400)
-    }
-    
-    /**
-     Returns how many hours have passed between the Date and another one
-     
-     - Parameter date: The `Date` to compare against
-     
-     - Returns: the number of hours as `Double`
-     */
-    public func hoursInBetweenDate(_ date: Date) -> Double {
-        return fabs(Date.getTimeInterval(self, date)/3600)
-    }
-    
-    /**
-     Returns how many minutes have passed between the Date and another one
-     
-     - Parameter date: The `Date` to compare against
-     
-     - Returns: the number of minutes as `Double`
-     */
-    public func minutesInBetweenDate(_ date: Date) -> Double {
-        return fabs(Date.getTimeInterval(self, date)/60)
-    }
-    
-    /**
-     Returns how many seconds have passed between the Date and another one
-     
-     - Parameter date: The `Date` to compare against
-     
-     - Returns: the number of seconds as `Double`
-     */
-    public func secondsInBetweenDate(_ date: Date) -> Double {
-        return fabs(Date.getTimeInterval(self, date))
+    public func inBetween(withDate: Date, unitOfTime: TimeUnit) -> Double {
+        return fabs(Date.getTimeInterval(self, withDate)/Double(unitOfTime.rawValue))
     }
     
     /**
@@ -224,5 +192,6 @@ public extension Date {
     private static func getTimeInterval(_ dateOne: Date, _ dateTwo: Date) -> Double {
         return dateOne.timeIntervalSince1970 - dateTwo.timeIntervalSince1970
     }
+    
     
 }

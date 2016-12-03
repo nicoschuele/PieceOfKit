@@ -11,6 +11,7 @@
 		03746D971DE670E800AA9D5C /* PieceOfKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 03746D891DE670E800AA9D5C /* PieceOfKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03B857C01DF349C100CF476B /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B857BF1DF349C100CF476B /* DateFormatter+Extensions.swift */; };
 		03B857C21DF34CB500CF476B /* DateFormatterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B857C11DF34CB500CF476B /* DateFormatterExtensionsTests.swift */; };
+		03B857C41DF3577100CF476B /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B857C31DF3577100CF476B /* TimeUnit.swift */; };
 		03B8C6841DEA4F510067B058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B8C6831DEA4F510067B058 /* UIKit.framework */; };
 		03C466A41DF0BAEA00469BAE /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466A31DF0BAEA00469BAE /* ArrayExtensionsTests.swift */; };
 		03C466A61DF0C3C200469BAE /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C466A51DF0C3C200469BAE /* StringExtensionsTests.swift */; };
@@ -62,6 +63,7 @@
 		03746D961DE670E800AA9D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03B857BF1DF349C100CF476B /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Extensions.swift"; path = "PieceOfKit/Extensions/DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		03B857C11DF34CB500CF476B /* DateFormatterExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatterExtensionsTests.swift; path = ExtensionsTests/DateFormatterExtensionsTests.swift; sourceTree = "<group>"; };
+		03B857C31DF3577100CF476B /* TimeUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeUnit.swift; path = Types/TimeUnit.swift; sourceTree = "<group>"; };
 		03B8C6831DEA4F510067B058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03C466A31DF0BAEA00469BAE /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtensionsTests.swift; path = ExtensionsTests/ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 		03C466A51DF0C3C200469BAE /* StringExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensionsTests.swift; path = ExtensionsTests/StringExtensionsTests.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				03D50AC61DF204DB0057EF3E /* RGBAColor.swift */,
 				03D50AC41DF204630057EF3E /* StringDateFormat.swift */,
+				03B857C31DF3577100CF476B /* TimeUnit.swift */,
 			);
 			name = Types;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				03C466AC1DF2174E00469BAE /* Double+Extensions.swift in Sources */,
 				03C466B01DF2185800469BAE /* CGFloat+Extensions.swift in Sources */,
 				03B857C01DF349C100CF476B /* DateFormatter+Extensions.swift in Sources */,
+				03B857C41DF3577100CF476B /* TimeUnit.swift in Sources */,
 				03FB45951DEF638400C57747 /* String+Extensions.swift in Sources */,
 				03FB45B21DEF743500C57747 /* Bool+Extensions.swift in Sources */,
 				03D50AC51DF204630057EF3E /* StringDateFormat.swift in Sources */,

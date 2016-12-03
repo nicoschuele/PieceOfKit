@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Dictionary Extension Reference</title>
+    <title>TimeUnit Enum Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/Dictionary" class="dashAnchor"></a>
-    <a title="Dictionary Extension Reference"></a>
+    <a name="//apple_ref/swift/Enum/TimeUnit" class="dashAnchor"></a>
+    <a title="TimeUnit Enum Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Dictionary Extension Reference
+        TimeUnit Enum Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -97,14 +97,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Dictionary</h1>
+            <h1>TimeUnit</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Dictionary</span><span class="o">&lt;</span><span class="kt">Key</span> <span class="p">:</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Collection</span><span class="p">,</span> <span class="kt">ExpressibleByDictionaryLiteral</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TimeUnit</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>Representation of standard units of time in seconds</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -112,9 +113,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FE10PieceOfKitVs10Dictionary3hasFT3keyx_Sb"></a>
-                    <a name="//apple_ref/swift/Method/has(key:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FE10PieceOfKitVs10Dictionary3hasFT3keyx_Sb">has(key:)</a>
+                    <a name="/s:FO10PieceOfKit8TimeUnit6secondFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/second" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO10PieceOfKit8TimeUnit6secondFMS0_S0_">second</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -122,63 +123,30 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Checks for the existence of a key</p>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    <p>Parameter key: the key you are looking for</p>
-
-</div>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <p><code>Bool</code></p>
-
-</div>
+                        <p>Represents 1 second</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">has</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">Key</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">second</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>key</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the key you are looking for</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p><code>Bool</code></p>
-
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FE10PieceOfKitVs10Dictionary8toStringFT_SS"></a>
-                    <a name="//apple_ref/swift/Method/toString()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FE10PieceOfKitVs10Dictionary8toStringFT_SS">toString()</a>
+                    <a name="/s:FO10PieceOfKit8TimeUnit6minuteFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/minute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO10PieceOfKit8TimeUnit6minuteFMS0_S0_">minute</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -186,39 +154,30 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts the dictionary into a string</p>
-
-<p>Format: <code>&quot;key&quot;:&quot;value&quot;,&quot;key2&quot;:&quot;value2&quot;</code></p>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    a <code>String</code> representation of the <code>Dictionary</code>
-
-</div>
+                        <p>Represents 60 seconds</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toString</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">minute</span> <span class="o">=</span> <span class="mi">60</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>a <code>String</code> representation of the <code>Dictionary</code></p>
-
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FE10PieceOfKitVs10Dictionary12toJSONStringFT_GSqSS_"></a>
-                    <a name="//apple_ref/swift/Method/toJSONString()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FE10PieceOfKitVs10Dictionary12toJSONStringFT_GSqSS_">toJSONString()</a>
+                    <a name="/s:FO10PieceOfKit8TimeUnit4hourFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/hour" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO10PieceOfKit8TimeUnit4hourFMS0_S0_">hour</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -226,27 +185,78 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts the <code>Dictionary</code> into a JSON formatted string</p>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    a <code>String</code> representation of the JSONified <code>Dictionary</code>
-
-</div>
+                        <p>Represents 3600 seconds</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toJSONString</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">hour</span> <span class="o">=</span> <span class="mi">3600</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>a <code>String</code> representation of the JSONified <code>Dictionary</code></p>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO10PieceOfKit8TimeUnit3dayFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/day" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO10PieceOfKit8TimeUnit3dayFMS0_S0_">day</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents 86400 seconds</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">day</span> <span class="o">=</span> <span class="mi">86400</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO10PieceOfKit8TimeUnit4weekFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/week" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO10PieceOfKit8TimeUnit4weekFMS0_S0_">week</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents 604800 seconds</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">week</span> <span class="o">=</span> <span class="mi">604800</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>

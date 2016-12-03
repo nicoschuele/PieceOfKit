@@ -41,6 +41,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/StringDateFormat.html">StringDateFormat</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TimeUnit.html">TimeUnit</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -478,9 +481,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FE10PieceOfKitV10Foundation4Date17daysInBetweenDateFS1_Sd"></a>
-                    <a name="//apple_ref/swift/Method/daysInBetweenDate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FE10PieceOfKitV10Foundation4Date17daysInBetweenDateFS1_Sd">daysInBetweenDate(_:)</a>
+                    <a name="/s:FE10PieceOfKitV10Foundation4Date9inBetweenFT8withDateS1_10unitOfTimeOS_8TimeUnit_Sd"></a>
+                    <a name="//apple_ref/swift/Method/inBetween(withDate:unitOfTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE10PieceOfKitV10Foundation4Date9inBetweenFT8withDateS1_10unitOfTimeOS_8TimeUnit_Sd">inBetween(withDate:unitOfTime:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -488,17 +491,23 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns how many days have passed between the Date and another one</p>
+                        <p>Returns how many <code>PieceOfKit.TimeUnit</code> have passed in between two dates</p>
 
 <div class="aside aside-parameter">
     <p class="aside-title">Parameter</p>
-    <p>Parameter date: The <code>Date</code> to compare against</p>
+    Parameter withDate: the <code>Date</code> to compare against
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter unitOfTime: the <code><a href="../Enums/TimeUnit.html">TimeUnit</a></code> to use for comparison</p>
 
 </div>
 
 <div class="aside aside-returns">
     <p class="aside-title">Returns</p>
-    <p>the number of days as <code>Double</code></p>
+    <p>the time interval as a <code>Double</code></p>
 
 </div>
 
@@ -507,7 +516,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">daysInBetweenDate</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">inBetween</span><span class="p">(</span><span class="nv">withDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="nv">unitOfTime</span><span class="p">:</span> <span class="kt"><a href="../Enums/TimeUnit.html">TimeUnit</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
 
                         </div>
                       </div>
@@ -518,76 +527,25 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>date</em>
+                                <em>withDate</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code>Date</code> to compare against</p>
+                                  <p>the <code>Date</code> to compare against</p>
 
                                 </div>
                               </td>
                             </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>the number of days as <code>Double</code></p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FE10PieceOfKitV10Foundation4Date18hoursInBetweenDateFS1_Sd"></a>
-                    <a name="//apple_ref/swift/Method/hoursInBetweenDate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FE10PieceOfKitV10Foundation4Date18hoursInBetweenDateFS1_Sd">hoursInBetweenDate(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns how many hours have passed between the Date and another one</p>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    <p>Parameter date: The <code>Date</code> to compare against</p>
-
-</div>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <p>the number of hours as <code>Double</code></p>
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hoursInBetweenDate</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
                             <tr>
                               <td>
                                 <code>
-                                <em>date</em>
+                                <em>unitOfTime</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code>Date</code> to compare against</p>
+                                  <p>the <code>TimeUnit</code> to use for comparison</p>
 
                                 </div>
                               </td>
@@ -597,135 +555,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>the number of hours as <code>Double</code></p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FE10PieceOfKitV10Foundation4Date20minutesInBetweenDateFS1_Sd"></a>
-                    <a name="//apple_ref/swift/Method/minutesInBetweenDate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FE10PieceOfKitV10Foundation4Date20minutesInBetweenDateFS1_Sd">minutesInBetweenDate(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns how many minutes have passed between the Date and another one</p>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    <p>Parameter date: The <code>Date</code> to compare against</p>
-
-</div>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <p>the number of minutes as <code>Double</code></p>
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">minutesInBetweenDate</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>date</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The <code>Date</code> to compare against</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>the number of minutes as <code>Double</code></p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FE10PieceOfKitV10Foundation4Date20secondsInBetweenDateFS1_Sd"></a>
-                    <a name="//apple_ref/swift/Method/secondsInBetweenDate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FE10PieceOfKitV10Foundation4Date20secondsInBetweenDateFS1_Sd">secondsInBetweenDate(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns how many seconds have passed between the Date and another one</p>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    <p>Parameter date: The <code>Date</code> to compare against</p>
-
-</div>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <p>the number of seconds as <code>Double</code></p>
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">secondsInBetweenDate</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>date</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The <code>Date</code> to compare against</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>the number of seconds as <code>Double</code></p>
+                        <p>the time interval as a <code>Double</code></p>
 
                       </div>
                     </section>
