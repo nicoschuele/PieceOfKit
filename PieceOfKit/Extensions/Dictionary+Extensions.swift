@@ -56,5 +56,18 @@ public extension Dictionary {
         }
     }
     
+    /**
+     Converts each value into a `String` and returns an `Array<String>`
+     
+     - Returns: an `Array<String>` of the `Dictionary` values
+     */
+    public func toStringArray() -> Array<String> {
+        var array = Array<String>()
+        for (_, v) in self {
+            array.append("\(v)")
+        }
+        return array
+    }
+    
 }
 
