@@ -38,4 +38,10 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertFalse(string4.toBool())
         XCTAssertFalse(string5.toBool())
     }
+    
+    func testToDate() {
+        let date = Date.fromString("20071020")
+        let stringDate = "20071020"
+        XCTAssertEqual(date, stringDate.toDate())
+    }
 }

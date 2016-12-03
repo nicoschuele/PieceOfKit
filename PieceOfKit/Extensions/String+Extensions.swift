@@ -80,6 +80,18 @@ public extension String {
     }
     
     /**
+     Turns a `String` into a `Date`
+     
+     - Parameter format: the input format of the string. For example, "20161129" is `StringDateFormat.YYYYMMDD`
+     
+     - Returns: a `Date`
+     */
+    public func toDate(stringDateFormat format: StringDateFormat = StringDateFormat.yyyyMMdd) -> Date? {
+        let dateFormatter = DateFormatter.fromStringDateFormat(format)
+        return dateFormatter.date(from: self)
+    }
+    
+    /**
      Gets a substring from a string using a range. Function taken from [http://stackoverflow.com/a/39509186/1296610](http://stackoverflow.com/a/39509186/1296610)
      
      - Parameter range: The non inclusive range in the `String` object. For example, `0..<5`
