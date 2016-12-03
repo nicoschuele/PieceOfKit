@@ -98,4 +98,77 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(dateFromString, nil)
     }
     
+    func testToday() {
+        let yesterday = Date().addDays(-1)
+        let today = Date()
+        let tomorrow = Date().addDays(1)
+        
+        XCTAssertTrue(today.isToday)
+        XCTAssertFalse(tomorrow.isToday)
+        XCTAssertFalse(yesterday.isToday)
+    }
+    
+    func testTomorrow() {
+        let yesterday = Date().addDays(-1)
+        let today = Date()
+        let tomorrow = Date().addDays(1)
+        
+        XCTAssertTrue(tomorrow.isTomorrow)
+        XCTAssertFalse(today.isTomorrow)
+        XCTAssertFalse(yesterday.isTomorrow)
+    }
+    
+    func testYesterday() {
+        let yesterday = Date().addDays(-1)
+        let today = Date()
+        let tomorrow = Date().addDays(1)
+        
+        XCTAssertTrue(yesterday.isYesterday)
+        XCTAssertFalse(today.isTomorrow)
+        XCTAssertFalse(tomorrow.isYesterday)
+    }
+    
+    func testThisMonth() {
+        let today = Date()
+        let twoMonthsAgo = Date().addMonths(-2)
+        let twoMonthsLater = Date().addMonths(2)
+        
+        XCTAssertTrue(today.isThisMonth)
+        XCTAssertFalse(twoMonthsAgo.isThisMonth)
+        XCTAssertFalse(twoMonthsLater.isThisMonth)
+    }
+    
+    func testIsThisWeek() {
+        let today = Date()
+        let inTwoWeeks = Date().addDays(14)
+        let twoWeeksAgo = Date().addDays(-14)
+        
+        XCTAssertTrue(today.isThisWeek)
+        XCTAssertFalse(inTwoWeeks.isThisWeek)
+        XCTAssertFalse(twoWeeksAgo.isThisWeek)
+    }
+    
+    func testYearComponent() {
+        let someDay = Date.dateFromString("19781103", stringDateFormat: PieceOfKit.StringDateFormat.YYYYMMDD)
+        XCTAssertEqual(someDay?.year, 1978)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

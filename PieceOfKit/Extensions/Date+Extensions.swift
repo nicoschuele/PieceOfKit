@@ -8,8 +8,142 @@
 
 import Foundation
 
-/// Useful extensions for the Date class
+/// Useful extensions for the Date class. Several methods taken from [EZSwiftExtensions](https://github.com/goktugyil/EZSwiftExtensions)
 public extension Date {
+    
+    //MARK: Properties
+    
+    /// Returns true if Date is today
+    public var isToday: Bool {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        return format.string(from: self) == format.string(from: Date())
+    }
+    
+    /// Returns true if Date is yesterday
+    public var isYesterday: Bool {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        let yesterDay = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+        return format.string(from: self) == format.string(from: yesterDay!)
+    }
+    
+    /// Returns true if Date is tomorrow
+    public var isTomorrow: Bool {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())
+        return format.string(from: self) == format.string(from: tomorrow!)
+    }
+    
+    /// Returns true if Date is within this month
+    public var isThisMonth: Bool {
+        let today = Date()
+        return self.month == today.month && self.year == today.year
+    }
+    
+    /// Returns true if Date is within this week
+    public var isThisWeek: Bool {
+        return self.minutesInBetweenDate(Date()) <= Double(24 * 60 * 7)
+    }
+    
+    /// Returns the year component of a Date as `Int`
+    public var year: Int {
+        return NSCalendar.current.component(Calendar.Component.year, from: self)
+    }
+    
+    /// Returns the month component of a Date as `Int`
+    public var month: Int {
+        return NSCalendar.current.component(Calendar.Component.month, from: self)
+    }
+    
+    /// Returns the weekday of a Date as `String`
+    public var weekday: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: self)
+    }
+    
+    /// Returns the month component of a Date as `String`
+    public var monthAsString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM"
+        return dateFormatter.string(from: self)
+    }
+    
+    /// Returns the day component of a Date as `Int`
+    public var day: Int {
+        return NSCalendar.current.component(Calendar.Component.day, from: self)
+    }
+    
+    /// Returns the hour component of a Date as `Int`
+    public var hour: Int {
+        return NSCalendar.current.component(Calendar.Component.hour, from: self)
+    }
+    
+    /// Returns the minute component of a Date as `Int`
+    public var minute: Int {
+        return NSCalendar.current.component(Calendar.Component.minute, from: self)
+    }
+    
+    /// Returns the second component of a Date as `Int`
+    public var second: Int {
+        return NSCalendar.current.component(Calendar.Component.second, from: self)
+    }
+    
+    //MARK: Instance methods
+    
+    /**
+     Returns how many days have passed between the Date and another one
+     
+     - Parameter date: The `Date` to compare against
+     
+     - Returns: the number of days as `Double`
+     */
+    public func daysInBetweenDate(_ date: Date) -> Double {
+        var diff = self.timeIntervalSince1970 - date.timeIntervalSince1970
+        diff = fabs(diff/86400)
+        return diff
+    }
+    
+    /**
+     Returns how many hours have passed between the Date and another one
+     
+     - Parameter date: The `Date` to compare against
+     
+     - Returns: the number of hours as `Double`
+     */
+    public func hoursInBetweenDate(_ date: Date) -> Double {
+        var diff = self.timeIntervalSince1970 - date.timeIntervalSince1970
+        diff = fabs(diff/3600)
+        return diff
+    }
+    
+    /**
+     Returns how many minutes have passed between the Date and another one
+     
+     - Parameter date: The `Date` to compare against
+     
+     - Returns: the number of minutes as `Double`
+     */
+    public func minutesInBetweenDate(_ date: Date) -> Double {
+        var diff = self.timeIntervalSince1970 - date.timeIntervalSince1970
+        diff = fabs(diff/60)
+        return diff
+    }
+    
+    /**
+     Returns how many seconds have passed between the Date and another one
+     
+     - Parameter date: The `Date` to compare against
+     
+     - Returns: the number of seconds as `Double`
+     */
+    public func secondsInBetweenDate(_ date: Date) -> Double {
+        var diff = self.timeIntervalSince1970 - date.timeIntervalSince1970
+        diff = fabs(diff)
+        return diff
+    }
     
     /**
      Add months to a Date
@@ -85,6 +219,8 @@ public extension Date {
         
         return dateFormatter.string(from: self)
     }
+    
+    //MARK: Class methods
     
     /**
      Turns a `String` into a `Date`
