@@ -59,6 +59,9 @@
                 <a href="../Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/DateFormatter.html">DateFormatter</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/Dictionary.html">Dictionary</a>
               </li>
               <li class="nav-group-task">
@@ -1071,7 +1074,7 @@
 
 <div class="aside aside-returns">
     <p class="aside-title">Returns</p>
-    <p>a <code>String</code> in the format YYYYMMDD or YYYYMMDDHHmm</p>
+    <p>a <code>String</code> in the format yyyyMMdd, yyyyMMddHHmm or yyyyMMddHHmmss</p>
 
 </div>
 
@@ -1080,7 +1083,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toString</span><span class="p">(</span><span class="n">stringDateFormat</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/StringDateFormat.html">StringDateFormat</a></span> <span class="o">=</span> <span class="kt"><a href="../Enums/StringDateFormat.html">StringDateFormat</a></span><span class="o">.</span><span class="kt">YYYYMMDD</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toString</span><span class="p">(</span><span class="n">stringDateFormat</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/StringDateFormat.html">StringDateFormat</a></span> <span class="o">=</span> <span class="kt"><a href="../Enums/StringDateFormat.html">StringDateFormat</a></span><span class="o">.</span><span class="n">yyyyMMdd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -1106,7 +1109,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>a <code>String</code> in the format YYYYMMDD or YYYYMMDDHHmm</p>
+                        <p>a <code>String</code> in the format yyyyMMdd, yyyyMMddHHmm or yyyyMMddHHmmss</p>
 
                       </div>
                     </section>
@@ -1126,9 +1129,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFE10PieceOfKitV10Foundation4Date14dateFromStringFTSS16stringDateFormatOS_16StringDateFormat_GSqS1__"></a>
-                    <a name="//apple_ref/swift/Method/dateFromString(_:stringDateFormat:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFE10PieceOfKitV10Foundation4Date14dateFromStringFTSS16stringDateFormatOS_16StringDateFormat_GSqS1__">dateFromString(_:stringDateFormat:)</a>
+                    <a name="/s:ZFE10PieceOfKitV10Foundation4Date10fromStringFTSS16stringDateFormatOS_16StringDateFormat_GSqS1__"></a>
+                    <a name="//apple_ref/swift/Method/fromString(_:stringDateFormat:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE10PieceOfKitV10Foundation4Date10fromStringFTSS16stringDateFormatOS_16StringDateFormat_GSqS1__">fromString(_:stringDateFormat:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1140,7 +1143,7 @@
 
 <div class="aside aside-parameter">
     <p class="aside-title">Parameter</p>
-    <p>Parameter format: the input format of the string. For example, <q>20161129</q> is <code><a href="../Enums/StringDateFormat.html#/s:FO10PieceOfKit16StringDateFormat8YYYYMMDDFMS0_S0_">StringDateFormat.YYYYMMDD</a></code></p>
+    <p>Parameter format: the input format of the string. For example, <q>20161129</q> is <code>StringDateFormat.YYYYMMDD</code></p>
 
 </div>
 
@@ -1155,7 +1158,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">dateFromString</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">stringDateFormat</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/StringDateFormat.html">StringDateFormat</a></span> <span class="o">=</span> <span class="kt"><a href="../Enums/StringDateFormat.html">StringDateFormat</a></span><span class="o">.</span><span class="kt">YYYYMMDD</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fromString</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">stringDateFormat</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/StringDateFormat.html">StringDateFormat</a></span> <span class="o">=</span> <span class="kt"><a href="../Enums/StringDateFormat.html">StringDateFormat</a></span><span class="o">.</span><span class="n">yyyyMMdd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
