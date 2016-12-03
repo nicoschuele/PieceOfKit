@@ -80,6 +80,13 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(dateYYYYMMDDHHmm!, Date.dateFromString(strYYYYMMDDHHmm, stringDateFormat: StringDateFormat.YYYYMMDDHHmm))
     }
     
+    func testYYYYMMDDHHmmss() {
+        let strYYYYMMDDHHmmss = "19781103200010"
+        dateFormatter.dateFormat = "yyyyMMddHHmmss"
+        let dateYYYYMMDDHHmmss = dateFormatter.date(from: strYYYYMMDDHHmmss)
+        XCTAssertEqual(dateYYYYMMDDHHmmss!, Date.dateFromString(strYYYYMMDDHHmmss, stringDateFormat: StringDateFormat.YYYYMMDDHHmmss))
+    }
+    
     func testStringFromDateAsYYYYMMDD() {
         let stringDate = "19781103"
         let dateFromString = Date.dateFromString(stringDate)
@@ -90,6 +97,12 @@ class DateExtensionsTests: XCTestCase {
         let stringDate = "197811031400"
         let dateFromString = Date.dateFromString(stringDate, stringDateFormat: .YYYYMMDDHHmm)
         XCTAssertEqual(stringDate, dateFromString?.toString(stringDateFormat: .YYYYMMDDHHmm))
+    }
+    
+    func testStringFromDateAsYYYYMMDDHHmmss() {
+        let stringDate = "19781103140010"
+        let dateFromString = Date.dateFromString(stringDate, stringDateFormat: .YYYYMMDDHHmmss)
+        XCTAssertEqual(stringDate, dateFromString?.toString(stringDateFormat: .YYYYMMDDHHmmss))
     }
     
     func testDateFromStringCanBeNil() {
@@ -152,6 +165,66 @@ class DateExtensionsTests: XCTestCase {
         let someDay = Date.dateFromString("19781103", stringDateFormat: PieceOfKit.StringDateFormat.YYYYMMDD)
         XCTAssertEqual(someDay?.year, 1978)
     }
+    
+    func testMonthComponent() {
+        let someDay = Date.dateFromString("19781103", stringDateFormat: PieceOfKit.StringDateFormat.YYYYMMDD)
+        XCTAssertEqual(someDay?.month, 11)
+    }
+    
+    func testDayComponent() {
+        let someDay = Date.dateFromString("19781103", stringDateFormat: PieceOfKit.StringDateFormat.YYYYMMDD)
+        XCTAssertEqual(someDay?.day, 3)
+    }
+    
+    func testHourComponent() {
+        let someDay = Date.dateFromString("197811031430", stringDateFormat: PieceOfKit.StringDateFormat.YYYYMMDDHHmm)
+        XCTAssertEqual(someDay?.hour, 14)
+    }
+    
+    func testMinuteComponent() {
+        let someDay = Date.dateFromString("197811031430", stringDateFormat: PieceOfKit.StringDateFormat.YYYYMMDDHHmm)
+        XCTAssertEqual(someDay?.minute, 30)
+    }
+    
+    func testSecondComponent() {
+        let someDay = Date.dateFromString("19781103143010", stringDateFormat: PieceOfKit.StringDateFormat.YYYYMMDDHHmmss)
+        XCTAssertEqual(someDay?.second, 10)
+    }
+    
+    func testWeekday() {
+        let someDay = Date.dateFromString("20161203")
+        XCTAssertEqual(someDay?.weekday, "Saturday")
+    }
+    
+    func testMonth() {
+        let someDay = Date.dateFromString("20161203")
+        XCTAssertEqual(someDay?.monthAsString, "December")
+    }
+    
+    func testDaysInBetween() {
+        let day = Date.dateFromString("20161201")
+        let someDay = Date.dateFromString("20161201")?.addDays(3)
+        XCTAssertEqual(day?.daysInBetweenDate(someDay!), 3.0)
+    }
+    
+    func testHoursInBetween() {
+        let day = Date.dateFromString("201612011400", stringDateFormat: .YYYYMMDDHHmm)
+        let someDay = Date.dateFromString("201612011400", stringDateFormat: .YYYYMMDDHHmm)?.addHours(3)
+        XCTAssertEqual(day?.hoursInBetweenDate(someDay!), 3.0)
+    }
+    
+    func testMinutesInBetween() {
+        let day = Date.dateFromString("201612011400", stringDateFormat: .YYYYMMDDHHmm)
+        let someDay = Date.dateFromString("201612011400", stringDateFormat: .YYYYMMDDHHmm)?.addMinutes(3)
+        XCTAssertEqual(day?.minutesInBetweenDate(someDay!), 3.0)
+    }
+    
+    func testSecondsInBetween() {
+        let day = Date.dateFromString("20161201140010", stringDateFormat: .YYYYMMDDHHmmss)
+        let someDay = Date.dateFromString("20161201140010", stringDateFormat: .YYYYMMDDHHmmss)?.addMinutes(1)
+        XCTAssertEqual(day?.secondsInBetweenDate(someDay!), 60.0)
+    }
+    
 }
 
 
