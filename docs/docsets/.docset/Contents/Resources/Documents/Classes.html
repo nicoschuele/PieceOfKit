@@ -32,6 +32,9 @@
               <li class="nav-group-task">
                 <a href="Classes/KeyboardManager.html">KeyboardManager</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/UniqueRunner.html">UniqueRunner</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -143,6 +146,48 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">KeyboardManager</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C10PieceOfKit12UniqueRunner"></a>
+                    <a name="//apple_ref/swift/Class/UniqueRunner" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C10PieceOfKit12UniqueRunner">UniqueRunner</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A class used to run a function only once.</p>
+
+<p>Example:</p>
+
+<pre class="highlight plaintext"><code>   let ur = UniqueRunner()
+   var result = ur.runOnce(addNumbers(2, 2))
+   result = ur.runOnce(addNumbers(5, 5))
+   result = ur.runOnce(addNumbers(10, 10))
+
+   result == 4 // true
+</code></pre>
+
+                        <a href="Classes/UniqueRunner.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UniqueRunner</span></code></pre>
 
                         </div>
                       </div>
