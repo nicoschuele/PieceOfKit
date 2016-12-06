@@ -22,7 +22,7 @@ PieceOfKit is a Cocoa Touch framework written in Swift 3 for iOS 9 and over. It 
 
 ## Installation
 
-Although a [CocoaPod](https://cocoapods.org) will be available soon, it's not quite there yet. For now, you'll need to `git clone https://github.com/nicoschuele/PieceOfKit.git` and add the PieceOfKit framework manually to your project. Don't know how to do it? Ray Wenderlich has an [step by step guide here](https://www.raywenderlich.com/126365/ios-frameworks-tutorial).
+Although a [CocoaPod](https://cocoapods.org) will be available soon, it's not quite there yet. For now, you'll need to `git clone https://github.com/nicoschuele/PieceOfKit.git` and add the PieceOfKit framework manually to your project. Don't know how to do it? Ray Wenderlich has a [step by step guide here](https://www.raywenderlich.com/126365/ios-frameworks-tutorial).
 
 ## Documentation & Usage
 
@@ -30,7 +30,7 @@ PieceOfKit is fully documented at [nicoschuele.github.io/PieceOfKit/](https://ni
 
 ## Contribute
 
-Are there pieces of code you constantly reuse between apps? Extensions you copy-paste from one project to another? Well, you may consider adding them to PieceOfKit so people can use them as well.
+Are there pieces of code you constantly reuse between apps? Extensions you copy-paste from one project to another? Well, you may consider adding them to PieceOfKit so people can profit from them as well.
 
 * Fork the code.
 * Implement your new feature.
