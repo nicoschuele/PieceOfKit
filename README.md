@@ -33,12 +33,15 @@ PieceOfKit is a Cocoa Touch framework written in Swift 3 for iOS 9 and over. It 
 1. Have [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) installed on your machine.
 2. Add PieceOfKit to your Podfile:
 
+    ```
     platform :ios, '9.0'
     use_frameworks!
 
     target 'YourAppName' do
       pod 'PieceOfKit', '~> 1.0'
     end
+    ```
+
 3. `pod install`
 4. `import PieceOfKit` within your source files.
 
