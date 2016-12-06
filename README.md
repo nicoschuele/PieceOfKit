@@ -11,19 +11,37 @@ master | development
 [![Build Status](https://travis-ci.org/nicoschuele/PieceOfKit.svg?branch=master)](https://travis-ci.org/nicoschuele/PieceOfKit) | [![Build Status](https://travis-ci.org/nicoschuele/PieceOfKit.svg?branch=development)](https://travis-ci.org/nicoschuele/PieceOfKit)
 [![codecov](https://codecov.io/gh/nicoschuele/PieceOfKit/branch/master/graph/badge.svg)](https://codecov.io/gh/nicoschuele/PieceOfKit) | [![codecov](https://codecov.io/gh/nicoschuele/PieceOfKit/branch/development/graph/badge.svg)](https://codecov.io/gh/nicoschuele/PieceOfKit)
 
+## What is it?
+
+PieceOfKit is a Cocoa Touch framework written in Swift 3 for iOS 9 and over. It contains useful extensions to basic types and some helpers methods. Initially inspired by projects like [EZSwiftExtensions](https://github.com/goktugyil/EZSwiftExtensions) and [ExSwift](https://github.com/pNre/ExSwift), I added things I use often under one roof. You can find a list of what it does at [nicoschuele.github.io/PieceOfKit/](https://nicoschuele.github.io/PieceOfKit/).
+
+## Design Goals
+
+* Have a one stop shop for code reuse between different apps
+* Be fully documented
+
 ## Installation
 
-...coming soon...
+Although a [CocoaPod](https://cocoapods.org) will be available soon, it's not quite there yet. For now, you'll need to `git clone https://github.com/nicoschuele/PieceOfKit.git` and add the PieceOfKit framework manually to your project. Don't know how to do it? Ray Wenderlich has an [step by step guide here](https://www.raywenderlich.com/126365/ios-frameworks-tutorial).
 
 ## Documentation & Usage
 
-Documentation at [nicoschuele.github.io/PieceOfKit/](https://nicoschuele.github.io/PieceOfKit/)
-
-...coming soon...
+PieceOfKit is fully documented at [nicoschuele.github.io/PieceOfKit/](https://nicoschuele.github.io/PieceOfKit/).
 
 ## Contribute
 
-Make sure you [contact me](https://twitter.com/nicoschuele) before submitting a pull request: I don't want you to waste your time.
+Are there pieces of code you constantly reuse between apps? Extensions you copy-paste from one project to another? Well, you may consider adding them to PieceOfKit so people can use them as well.
+
+* Fork the code.
+* Implement your new feature.
+* **Document it**! This is not optional. Check some methods already in PieceOfKit to see how it's done.
+* As much as possible, write unit tests. Add them to `PieceOfKitTests`.
+* Submit a pull request. One and only one per feature. Don't group them, thanks!
+
+## Acknowledgements and Thanks
+
+* [EZSwiftExtensions](https://github.com/goktugyil/EZSwiftExtensions) by [Goktug Yilmaz](http://angel.co/goktugyil)
+* [ExSwift](https://github.com/pNre/ExSwift) by [pNre](https://github.com/pNre)
 
 ## License
 
