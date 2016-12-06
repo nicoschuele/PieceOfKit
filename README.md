@@ -1,6 +1,6 @@
 # PieceOfKit
 
-[![Swift Version](https://img.shields.io/badge/Swift-3.0.x-orange.svg)]() [![codebeat badge](https://codebeat.co/badges/910dc184-e643-4bbe-88d1-3a37cf71be5e)](https://codebeat.co/projects/github-com-nicoschuele-pieceofkit)
+[![Swift Version](https://img.shields.io/badge/Swift-3.0.x-orange.svg)]() [![codebeat badge](https://codebeat.co/badges/910dc184-e643-4bbe-88d1-3a37cf71be5e)](https://codebeat.co/projects/github-com-nicoschuele-pieceofkit) [![CocoaPods](https://img.shields.io/cocoapods/v/PieceOfKit.svg)]() [![CocoaPods](https://img.shields.io/cocoapods/p/PieceOfKit.svg)]()
 
 A collection of useful extensions and helper methods for iOS Swift 3 developers.
 
@@ -22,7 +22,25 @@ PieceOfKit is a Cocoa Touch framework written in Swift 3 for iOS 9 and over. It 
 
 ## Installation
 
-Although a [CocoaPod](https://cocoapods.org) will be available soon, it's not quite there yet. For now, you'll need to `git clone https://github.com/nicoschuele/PieceOfKit.git` and add the PieceOfKit framework manually to your project. Don't know how to do it? Ray Wenderlich has a [step by step guide here](https://www.raywenderlich.com/126365/ios-frameworks-tutorial).
+### Manually
+
+1. `git clone https://github.com/nicoschuele/PieceOfKit.git`
+2. Add the PieceOfKit framework manually to your project. Don't know how to do it? Ray Wenderlich has a [step by step guide here](https://www.raywenderlich.com/126365/ios-frameworks-tutorial).
+3. `import PieceOfKit` within your source files.
+
+### CocoaPods
+
+1. Have [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) installed on your machine.
+2. Add PieceOfKit to your Podfile:
+
+    platform :ios, '9.0'
+    use_frameworks!
+
+    target 'YourAppName' do
+      pod 'PieceOfKit', '~> 1.0'
+    end
+3. `pod install`
+4. `import PieceOfKit` within your source files.
 
 ## Documentation & Usage
 
